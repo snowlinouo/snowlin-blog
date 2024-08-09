@@ -15,7 +15,7 @@ import { blogTheme } from './blog-theme'
 export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
-  // base,
+  "/snowlin-blog/",
   lang: 'zh-tw',
   title: '雪鈴 SnowLin ',
   description: '一個溫暖的的小窩',
