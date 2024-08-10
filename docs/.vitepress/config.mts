@@ -44,12 +44,12 @@ export default defineConfig({
     // },
     nav: [
       { text: '首頁', link: '/' },
-      { text: '關於作者', link: 'https://sugarat.top/aboutme.html' }
+      { text: '關於作者', link: '/Snowlin.md' }
     ],
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme'
+        link: 'https://github.com/snowlinouo/snowlin-blog'
       }
     ]
   }
