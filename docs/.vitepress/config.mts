@@ -6,6 +6,8 @@ import { blogTheme } from './blog-theme'
 // doc sidebar
 import { sidebar } from './sidebar'
 
+import { nav } from './nav'
+
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
@@ -45,33 +47,7 @@ export default defineConfig({
     //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
     //   text: '去 GitHub 上编辑内容'
     // },
-    nav: [
-      {
-        text: '首頁',
-        link: '/' 
-      },
-      {
-        text: '光遇',
-        items: [
-          {
-            text: '目錄',
-            link: '/sky/',
-          },
-          {
-            text: '光遇介紹',
-            link: '/sky/sky-index',
-          },
-          {
-            text: '更新日誌',
-            link: '/sky/test',
-          },
-        ],
-      },
-      {
-        text: '關於作者',
-        link: '/about.md'
-      }
-    ],
+    nav: nav(),
     sidebar: sidebar(),
     docFooter: {
       prev: false,
