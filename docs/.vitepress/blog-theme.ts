@@ -97,6 +97,13 @@ const blogTheme = getThemeConfig({
     ],
   },
 
+  backToTop: {
+    // 自定义触发高度
+    top: 450,
+    // 自定义图标
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 16 16"><path fill="currentColor" d="M3 2.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 2.25Zm5.53 2.97l3.75 3.75a.749.749 0 1 1-1.06 1.06L8.75 7.561v6.689a.75.75 0 0 1-1.5 0V7.561L4.78 10.03a.749.749 0 1 1-1.06-1.06l3.75-3.75a.749.749 0 0 1 1.06 0Z"/></svg>'
+  },
+
   // 公告
   popover: {
     title: '小公告',
@@ -118,7 +125,9 @@ const blogTheme = getThemeConfig({
         link: 'https://discord.gg/W7P6UFQ'
       }
     ],
-    duration: -1
+    duration: -1,
+    twinkle: false,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 20 20"><path fill="currentColor" d="M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3z"/></svg>'
   },
 })
 
