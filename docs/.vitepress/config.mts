@@ -18,6 +18,7 @@ import { nav } from './nav'
 export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
+  cleanUrls: true,
   // base: '/snowlin-blog/',
   lang: 'zh-tw',
   title: '雪鈴 SnowLin ',
