@@ -52,7 +52,7 @@ const blogTheme = getThemeConfig({
   hotArticle: {
     title: '🔥 精選文章',
     nextText: '下一頁',
-    pageSize: 9,
+    pageSize: 10,
     empty: '暫時沒有精選内容'
   },
 
@@ -61,12 +61,18 @@ const blogTheme = getThemeConfig({
   },
 
   recommend: {
+    filter: (page) => {
+      if (page.route.startsWith('/sky/')) {
+        return false
+      }
+      return true
+    },
     title: '🔍 推薦文章',
     nextText: '下一頁',
-    pageSize: 1,
+    pageSize: 10,
     style: 'sidebar',
-    sort: 'filename' // 文件名排序
-    // empty: false // false时无推荐文章不展示此模块
+    sort: 'filename', // 文件名排序
+    empty: false // false时无推荐文章不展示此模块
   },
 
   // alert: {

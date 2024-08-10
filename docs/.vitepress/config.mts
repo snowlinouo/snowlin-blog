@@ -3,6 +3,9 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
+// doc sidebar
+import { sidebar } from './sidebar'
+
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
@@ -43,9 +46,39 @@ export default defineConfig({
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: '首頁', link: '/' },
-      { text: '關於作者', link: '/Snowlin.md' }
+      {
+        text: '首頁',
+        link: '/' 
+      },
+      {
+        text: '光遇',
+        items: [
+          {
+            text: '目錄',
+            link: '/sky/',
+          },
+          {
+            text: '光遇介紹',
+            link: '/sky/sky-index',
+          },
+          {
+            text: '更新日誌',
+            link: '/sky/test',
+          },
+        ],
+      },
+      {
+        text: '關於作者',
+        link: '/Snowlin.md'
+      }
     ],
+    sidebar: sidebar(),
+    docFooter: {
+      prev: false,
+      next: false
+      //prev: '上一頁',
+      //next: '下一頁'
+    },
     socialLinks: [
       {
         icon: 'github',

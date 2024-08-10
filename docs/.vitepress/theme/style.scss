@@ -10,6 +10,12 @@
     background-image: url(./assets/bg.webp);
     background-size: cover;
   }
+}
 
-  
+// sidebar
+@media (min-width: 1440px) {
+  aside.VPSidebar {
+    padding-left: max(32px, calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)) !important;
+    padding-right: 10px !important;
+  }
 }
