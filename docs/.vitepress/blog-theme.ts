@@ -85,58 +85,40 @@ const blogTheme = getThemeConfig({
 
   // 友链
   friend: {
-    title: `🤝 友情連結`,
+    title: `🤝 相關連結`,
     list: [
       {
-        nickname: '粥里有勺糖',
-        des: '你的指尖用于改变世界的力量',
+        nickname: '雪花們的小窩',
+        des: 'Discord 群',
         avatar:
-          'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-        url: 'https://sugarat.top',
-      },
-      {
-        nickname: 'Vitepress',
-        des: 'Vite & Vue Powered Static Site Generator',
-        avatar:
-          'https://vitepress.dev/vitepress-logo-large.webp',
-        url: 'https://vitepress.dev/',
-      },
+          '/Discord 群頭貼.png',
+        url: 'https://discord.gg/W7P6UFQ',
+      }
     ],
   },
 
   // 公告
   popover: {
-    title: '公告',
+    title: '小公告',
+    mobileMinify: true,
     body: [
-      { type: 'text', content: '👇公众号👇---👇 微信 👇' },
+      { type: 'text', content: '網站施工中' },
       {
         type: 'image',
-        src: 'https://img.cdn.sugarat.top/mdImg/MTYxNTAxODc2NTIxMA==615018765210~fmt.webp'
+        src: '/logo.png',
+        //style: 'display: inline-block;width:46%;padding-right:6px'
       },
-      {
-        type: 'text',
-        content: '欢迎大家加群&私信交流'
-      },
-      {
-        type: 'text',
-        content: '文章首/文尾有群二维码',
-        style: 'padding-top:0'
-      },
+      //{
+      //  type: 'text',
+      //  content: '歡迎加群聊天'
+      //},
       {
         type: 'button',
-        content: '作者博客',
-        link: 'https://sugarat.top'
-      },
-      {
-        type: 'button',
-        content: '加群交流',
-        props: {
-          type: 'success'
-        },
-        link: 'https://theme.sugarat.top/group.html',
+        content: 'Discord 群',
+        link: 'https://discord.gg/W7P6UFQ'
       }
     ],
-    duration: 0
+    duration: -1
   },
 })
 

@@ -69,7 +69,7 @@ export default defineConfig({
       },
       {
         text: '關於作者',
-        link: '/Snowlin.md'
+        link: '/about.md'
       }
     ],
     sidebar: sidebar(),
@@ -85,6 +85,16 @@ export default defineConfig({
         link: 'https://github.com/snowlinouo/snowlin-blog'
       }
     ]
-  }
+  },
+  //locales: {
+  //  root: {
+  //    lang: 'zh_tw',
+  //    label: '繁體中文'
+  //  },
+  //  en: {
+  //    lang: 'en',
+  //    label: 'English',
+  //  }
+  //}
 })
 
