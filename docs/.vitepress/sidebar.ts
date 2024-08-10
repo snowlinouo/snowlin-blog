@@ -20,8 +20,8 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                 link: 'sky/sky-index',
               },
               {
-                text: '測試',
-                link: 'sky/test',
+                text: '垃圾光遇',
+                link: 'sky/sky-garbage',
               },
             ],
           },
