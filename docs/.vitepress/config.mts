@@ -6,14 +6,14 @@ import { blogTheme } from './blog-theme'
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
-const base = '/snowlin-blog/'
+// const base = '/snowlin-blog/'
 
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
-    base,
+  base: '/snowlin-blog/',
   lang: 'zh-tw',
   title: '雪鈴 SnowLin ',
   description: '一個溫暖的的小窩',
@@ -28,7 +28,7 @@ export default defineConfig({
     // 展示 2,3 级标题在目录中
     outline: {
       level: [2, 3],
-      label: '目录'
+      label: '目錄'
     },
     // 默认文案修改
     returnToTopLabel: '回到頂部',
