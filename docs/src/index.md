@@ -11,7 +11,4 @@ blog:
  # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 3000
  pageSize: 10
- analysis: 
-  articles: 
-    title: ['文章', '本月更新', '本周更新']
 ---

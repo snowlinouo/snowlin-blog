@@ -16,6 +16,7 @@ import { nav } from './nav'
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
+  srcDir: 'src',
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
   cleanUrls: true,
@@ -40,6 +41,15 @@ export default defineConfig({
     returnToTopLabel: '回到頂部',
     sidebarMenuLabel: '相關文章',
     lastUpdatedText: '上次更新於',
+    langMenuLabel: '更改語言',
+    darkModeSwitchLabel: '主題',
+    lightModeSwitchTitle: '切換到淺色模式',
+    darkModeSwitchTitle: '切換到深色模式',
+    notFound: {
+      title: '這個頁面找不到了',
+      quote: '404',
+      linkLabel: '回到首頁',
+    },
 
     // 设置logo
     logo: '/logo.png',
@@ -57,6 +67,18 @@ export default defineConfig({
       //next: '下一頁'
     },
     socialLinks: [
+      {
+        icon: 'youtube',
+        link: 'https://www.youtube.com/@nightsnowlin'
+      },
+      {
+        icon: 'facebook',
+        link: 'https://www.facebook.com/SnowLinOuO/'
+      },
+      {
+        icon: 'twitter',
+        link: 'https://x.com/nightsnowlin'
+      },
       {
         icon: 'github',
         link: 'https://github.com/snowlinouo/snowlin-blog'

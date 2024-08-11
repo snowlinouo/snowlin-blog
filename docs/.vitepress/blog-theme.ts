@@ -17,6 +17,7 @@ import { getThemeConfig } from '@sugarat/theme/node'
 
 // 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
+  srcDir: './docs/src',
   // 开启RSS支持
   // RSS,
 
@@ -46,8 +47,34 @@ const blogTheme = getThemeConfig({
   // 主题色修改
   themeColor: 'vp-green',
 
+  //黑暗模式切換
+  darkTransition: true,
+
   // 文章默认作者
   author: '雪鈴',
+
+  home: {
+    analysis: {
+      articles: {
+        title: ['文章', '本月更新', '本周更新']
+      }
+    }
+  },
+
+  article: {
+    /**
+     * 是否展示文章的预计阅读时间
+     */
+    readingTime: false,
+    /**
+     * 是否隐藏文章页的封面展示
+     */
+    hiddenCover: false,
+    /**
+     * 阅读时间分析展示位置
+     */
+    readingTimePosition: 'inline'
+  },
 
   hotArticle: {
     title: '🔥 精選文章',
