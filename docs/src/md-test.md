@@ -30,6 +30,13 @@ Just want to try it out? Skip to the [Quickstart](https://www.youtube.com/).
 > 測試
 > 測試
 
+<span class="紅色">測試</span>
+<span class="綠色">測試</span>
+<span class="藍色">測試</span>
+<span class="黃色">測試</span>
+<span class="紫色">測試</span>
+<span class="青色">測試</span>
+
 <span class="fold fold-primary">測試</span>
 
 <span class="note note-info">測試</span>

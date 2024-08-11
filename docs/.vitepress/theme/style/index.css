@@ -1,3 +1,6 @@
 @import './style.scss';
 @import './linkcard.css';
+
+/* 文字顏色 */
 @import './text-color.css';
+@import './text-markdown-color.css';
