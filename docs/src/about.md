@@ -7,7 +7,7 @@ hidden: false
 
 <div class="tip custom-block" style="padding-top: 8px"> 
  
-Just want to try it out? Skip to the [Quickstart](./getting-started).
+Just want to try it out? Skip to the [Quickstart](https://youtube.com).
 
 11232
 
@@ -30,11 +30,3 @@ Just want to try it out? Skip to the [Quickstart](./getting-started).
 > 測試
 > 測試
 > 測試
-
-<span class="label label-default">Default Label</span>
-<span class="label label-primary">Primary Label</span>
-<span class="label label-success">Success Label</span>
-<span class="label label-info">Info Label</span>
-<span class="label label-warning">Warning Label</span>
-<span class="label label-danger">Danger Label</span>
-
