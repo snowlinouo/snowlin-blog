@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
-// doc sidebar
+// 側邊欄
 import { sidebar } from './sidebar'
 
+//頂部導航列
 import { nav } from './nav'
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
@@ -25,7 +26,6 @@ export default defineConfig({
   title: '雪鈴 SnowLin ',
   description: '一個溫暖的的小窩',
   lastUpdated: true,
-  // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
@@ -37,7 +37,7 @@ export default defineConfig({
       level: [2, 3],
       label: '目錄'
     },
-    // 默认文案修改
+    // 預設文案修改
     returnToTopLabel: '回到頂部',
     sidebarMenuLabel: '相關文章',
     lastUpdatedText: '上次更新於',
