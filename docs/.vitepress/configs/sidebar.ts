@@ -13,7 +13,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: 'sky/index',
     },
     {
-      text: '123',
+      text: '一般',
       collapsed: false,
       items: [
         {
