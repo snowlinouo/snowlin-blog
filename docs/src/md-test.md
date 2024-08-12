@@ -137,31 +137,31 @@ Just want to try it out? Skip to the [Quickstart](https://www.youtube.com/).
 測試
 </div>
 
-1. 測試
-2. 測試
-3. 測試
-4. 測試
-5. 測試
-6. 測試
-7. 測試
-8. 測試
-9. 測試
+01. 測試
+02. 測試
+03. 測試
+04. 測試
+05. 測試
+06. 測試
+07. 測試
+08. 測試
+09. 測試
 10. 測試
 11. 測試
 
 ::: details
 <ol>
-<li>開啟 Minecraft</li>
-<li>點選 <span class="label label-info">多人遊戲</span></li>
-<li>點選 <span class="label label-info">新增伺服器</span></li>
-<li>於 <span class="label label-info">伺服器位址</span> 中填入 <span class="label label-success">brilliantw.net</span></li>
-<li>點選 <span class="label label-info">完成</span></li>
-<li>點選帶有 <span class="label label-info">輝煌伺服器</span> 字樣的 Minecraft 伺服器</li>
-<li>點選 <span class="label label-info">加入伺服器</span></li>
-<li>跳出 <span class="label label-info">材質包下載要求</span> 後，點選 <span class="label label-info">是</span></li>
-<li>恭喜你！成功加入輝煌伺服器了！</li>
-<li>恭喜你！成功加入輝煌伺服器了！</li>
-<li>恭喜你！成功加入輝煌伺服器了！</li>
-<li>恭喜你！成功加入輝煌伺服器了！</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
+<li>測試</li>
 </ol>
 :::
