@@ -23,7 +23,7 @@ export default defineConfig({
   cleanUrls: true,
   // base: '/snowlin-blog/',
   lang: 'zh-tw',
-  title: '雪鈴 SnowLin ',
+  title: 'SnowLin Blog',
   description: '一個溫暖的的小窩',
   lastUpdated: true,
   head: [
