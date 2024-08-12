@@ -1,8 +1,6 @@
 ---
 title: Minecraft
 hidden: true
-tag:
- - MC
 recommend: 1
 ---
 # 施工中

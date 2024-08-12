@@ -20,6 +20,17 @@
   }
 }
 
+.VPDoc .content main {
+  img {
+    max-height: initial; //關閉限制圖片大小高度
+    margin: 0 auto; //圖片位置 預設居中
+  }
+
+  .vp-doc a {
+    word-break: break-all;
+  }
+}
+
 main .vp-doc a:hover {
   text-decoration: none;
 }
