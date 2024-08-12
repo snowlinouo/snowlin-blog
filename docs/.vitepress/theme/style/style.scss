@@ -24,6 +24,21 @@ main .vp-doc a:hover {
   text-decoration: none;
 }
 
+.vp-doc p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.vp-doc ol ::marker {
+  text-align: center !important;
+  text-align-last: center !important;
+}
+
+.vp-doc ol, ul {
+  padding-left: 2em;
+  list-style-position: outside;
+}
+
 // .vp-doc blockquote {
 //   border-radius: 5px;
 //   padding: 10px 16px;
