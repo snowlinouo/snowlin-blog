@@ -3,11 +3,8 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
-// 側邊欄
-import { sidebar } from './sidebar'
-
-//頂部導航列
-import { nav } from './nav'
+import { nav } from './configs'
+import { sidebar } from './configs'
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -58,8 +55,8 @@ export default defineConfig({
     //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
     //   text: '去 GitHub 上编辑内容'
     // },
-    nav: nav(),
-    sidebar: sidebar(),
+    nav,
+    sidebar,
     docFooter: {
       prev: false,
       next: false

@@ -100,6 +100,7 @@ const blogTheme = getThemeConfig({
     style: 'sidebar',
     sort: 'filename', // 文件名排序
     empty: false // false时无推荐文章不展示此模块
+    // empty: '暫時沒有相關文章'
   },
 
   // alert: {

@@ -1,9 +1,8 @@
 ---
-title: Minecraft
-hidden: true
+title: Masa 翻譯包
 tag:
  - MC
-recommend: 1
+recommend: 2
 ---
 # 施工中
 
