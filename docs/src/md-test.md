@@ -136,32 +136,3 @@ Just want to try it out? Skip to the [Quickstart](https://www.youtube.com/).
 
 測試
 </div>
-
-1. 測試
-2. 測試
-3. 測試
-4. 測試
-5. 測試
-6. 測試
-7. 測試
-8. 測試
-9. 測試
-10. 測試
-11. 測試
-
-::: details
-<ol>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-<li>測試</li>
-</ol>
-:::

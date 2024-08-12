@@ -4,6 +4,7 @@
   border-radius: 8px;
   padding: 8px 16px 8px 8px;
   transition: color 0.5s, background-color 0.5s;
+  margin: 16px 0;
 }
 
 /* 卡片鼠标悬停 */
