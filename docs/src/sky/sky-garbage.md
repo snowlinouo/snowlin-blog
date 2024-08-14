@@ -1,7 +1,6 @@
 ---
 title: 垃圾光遇
 description: 垃圾 TGC
-recommend: ['sky']
 ---
 # 垃圾光遇 TGC 的消極列表
 

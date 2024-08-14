@@ -49,17 +49,29 @@ main .vp-doc a:hover {
 }
 
 .vp-doc p {
+  margin-bottom: 10px;
+}
+
+.note p {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.vp-doc ::marker {
+body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
 .vp-doc ol, ul {
 //  padding-left: 2em;
   list-style-position: outside;
+}
+
+.vp-doc ul ul {
+  list-style-type: circle !important;
+}
+
+.vp-doc ul ul ul {
+  list-style-type: square !important;
 }
 
 // .vp-doc blockquote {

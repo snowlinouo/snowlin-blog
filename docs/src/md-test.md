@@ -59,10 +59,10 @@ hidden: true
 ::: details
 <div class="note note-secondary">容器提示框展示</div>
 <div class="note note-primary">容器提示框展示</div>
-<div class="note note-info">容器提示框展示</div>
 <div class="note note-success">容器提示框展示</div>
-<div class="note note-warning">容器提示框展示</div>
 <div class="note note-danger">容器提示框展示</div>
+<div class="note note-warning">容器提示框展示</div>
+<div class="note note-info">容器提示框展示</div>
 <div class="note note-light">容器提示框展示</div>
 :::
 

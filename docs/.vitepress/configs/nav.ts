@@ -22,12 +22,12 @@ export const nav: DefaultTheme.Config['nav'] = [
         link: '/sky/',
       },
       {
-        text: '光遇介紹',
-        link: '/sky/sky-index',
+        text: '更新內容',
+        link: '/sky/patch',
       },
       {
-        text: '光遇垃圾',
-        link: '/sky/sky-garbage',
+        text: '已知問題',
+        link: '/sky/known-issues',
       },
     ],
   },
