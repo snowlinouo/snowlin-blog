@@ -13,13 +13,17 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: 'sky/index',
     },
     {
-      text: '更新紀錄',
+      text: '版本更新內容',
       collapsed: false,
       items: [
         {
-          text: '新內容',
+          text: '更新日誌',
           collapsed: false,
           items: [
+            {
+              text: '目錄',
+              link: 'sky/patch/index',
+            },
             {
               text: '0.26.3',
               link: 'sky/patch/0.26.3',
@@ -42,6 +46,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '已知問題',
           collapsed: true,
           items: [
+            {
+              text: '目錄',
+              link: 'sky/known-issues/index',
+            },
             {
               text: '0.26.3',
               link: 'sky/known-issues/0.26.3',
