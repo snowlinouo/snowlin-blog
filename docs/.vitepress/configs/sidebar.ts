@@ -51,10 +51,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               link: 'sky/known-issues/index',
             },
             {
-              text: '0.26.3',
-              link: 'sky/known-issues/0.26.3',
-            },
-            {
               text: '0.26.2',
               link: 'sky/known-issues/0.26.2',
             },
