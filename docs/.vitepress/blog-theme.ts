@@ -61,11 +61,20 @@ const blogTheme = getThemeConfig({
     }
   },
 
+  formatShowDate: {
+    justNow: '剛剛',
+    secondsAgo: ' 秒前',
+    minutesAgo: ' 分鐘前',
+    hoursAgo: ' 小時前',
+    daysAgo: ' 天前',
+    weeksAgo: ' 周前',
+  },
+
   article: {
     /**
      * 是否展示文章的预计阅读时间
      */
-    readingTime: false,
+    readingTime: true,
     /**
      * 是否隐藏文章页的封面展示
      */
@@ -73,7 +82,22 @@ const blogTheme = getThemeConfig({
     /**
      * 阅读时间分析展示位置
      */
-    readingTimePosition: 'inline'
+    readingTimePosition: 'inline',
+    /**
+     * 自定义一系列文案标题
+     */
+    analyzeTitles: {
+      topWordCount: '字數：{{value}} 個字',
+      topReadTime: '預計：{{value}} 分鐘',
+      inlineWordCount: '{{value}} 個字',
+      inlineReadTime: '{{value}} 分鐘',
+      wordCount: '文章字數',
+      readTime: '預計閱讀時間',
+      author: '作者',
+      publishDate: '發布時間',
+      lastUpdated: '最後修改時間',
+      tag: '標籤',
+    }
   },
 
   hotArticle: {
