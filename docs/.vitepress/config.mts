@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import Unocss from 'unocss/vite'
 
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
@@ -40,6 +41,11 @@ export default defineConfig({
       gtag('config', 'G-90WQ945DK0');`
     ]
   ],
+  vite: {
+    plugins: [
+      Unocss(),
+    ]
+  },
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
