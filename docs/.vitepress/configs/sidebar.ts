@@ -25,6 +25,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               link: 'sky/patch/index',
             },
             {
+              text: '0.26.5',
+              link: 'sky/patch/0.26.5',
+            },
+            {
               text: '0.26.3',
               link: 'sky/patch/0.26.3',
             },
@@ -49,6 +53,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             {
               text: '目錄',
               link: 'sky/known-issues/index',
+            },
+            {
+              text: '0.26.5',
+              link: 'sky/known-issues/0.26.5',
             },
             {
               text: '0.26.2',
