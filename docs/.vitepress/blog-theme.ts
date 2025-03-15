@@ -32,6 +32,7 @@ const blogTheme = getThemeConfig({
     toNavigate: '切換',
     toClose: '關閉'
   },
+  tabs: true,
 
   // markdown 图表支持（会增加一定的构建耗时）
   // mermaid: true
