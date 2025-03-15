@@ -18,7 +18,7 @@ hidden: true
 ### fold 文字背景顏色
 以下是文字顏色的格式展示：
 
-```md
+```html
 <span class="fold fold-secondary">測試</span>
 <span class="fold fold-primary">測試</span>
 <span class="fold fold-info">測試</span>
@@ -46,7 +46,7 @@ hidden: true
 
 ### note 容器提示框
 
-```md
+```html
 <div class="note note-secondary">容器提示框展示</div>
 <div class="note note-primary">容器提示框展示</div>
 <div class="note note-success">容器提示框展示</div>
@@ -68,7 +68,7 @@ hidden: true
 
 ### label 類文字 Code 高亮
 
-```md
+```html
 <span class="label label-default">文字展示</span>
 <span class="label label-secondary">文字展示</span>
 <span class="label label-primary">文字展示</span>
@@ -96,7 +96,7 @@ hidden: true
 
 ### 文字純顏色
 
-```md
+```html
 <span class="紅色">測試</span>
 <span class="綠色">測試</span>
 <span class="藍色">測試</span>
