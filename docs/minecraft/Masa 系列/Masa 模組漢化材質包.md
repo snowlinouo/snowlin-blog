@@ -23,7 +23,15 @@ sticky: 1
 ```
 :::
 
-## 資源包介紹
+<div class="note note-danger">
+
+**目前從 `v1.3.3` 版本開始只支援 1.21+ 以上的版本。**
+
+**如果你是 1.20.x 及 1.19.x 版本的使用者，請下載 [v1.0.1 (1.19-1.20)](https://modrinth.com/resourcepack/masa-mod-translationpack/version/1.0.1(1.19-1.20)) 版本！**
+</div>
+
+
+# 資源包介紹
 這是專門為 Masa 系列模組做的模組中文漢化資源包，支援的系列模組在下方列出
 
 本漢化資源包支援繁體中文、簡體中文 2 種語言，給那些不懂英文的玩家使用
@@ -33,6 +41,8 @@ sticky: 1
 ![圖片](https://cdn-raw.modrinth.com/data/IEt3hTCe/images/52e3fef544542756b39defab52c76b2b59569434.png)
 
 ## 此翻譯包支援的模組列表
+1.19.X、1.20.X 版本：
+
 MaLiLib
 https://www.curseforge.com/minecraft/mc-mods/malilib
 
@@ -58,8 +68,10 @@ https://github.com/sakura-ryoko?tab=repositories
 圖示：TN_TechNoob
 
 ## 作者授權
-作者：醉梦巅峰
+作者：醉梦巅峰、思夢Lri
 
-作者的 Bilibili：[連結](https://space.bilibili.com/13205801)
+醉梦巅峰 Bilibili：[連結](https://space.bilibili.com/13205801)
+
+思夢Lri Github：[連結](https://github.com/DreamingLri/masa-mods-chinese)
 
 授權證明：https://i.imgur.com/XJ5KeEM.jpg

@@ -151,9 +151,11 @@ const teekConfig = defineTeekConfig({
       initItems: false,
     },
   },
-  markdownPlugins: [
-    (md: any) => md.use(timeline), //時間線插件
-  ],
+  markdown: {
+    config: (md) => {
+      md.use(timeline); //时间线插件
+    },
+  },
 });
 
 // https://vitepress.dev/reference/site-config
@@ -247,7 +249,7 @@ export default defineConfig({
     },
     editLink: {
       text: "在 GitHub 上編輯此頁",
-      pattern: "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/hd-security-docs/docs/:path",
+      pattern: "https://github.com/snowlinouo/snowlin-blog/edit/main/docs/:path",
     },
   },
 });
