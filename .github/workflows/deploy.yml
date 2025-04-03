@@ -12,7 +12,7 @@ on:
 
 # 设置时区
 env:
-  TZ: Asia/Shanghai
+  TZ: Asia/Taipei
 
 # 权限设置
 permissions:
@@ -73,7 +73,7 @@ jobs:
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
-          pnpm build
+          pnpm docs:build
 
         # 资源拷贝
       - name: Build with Jekyll
