@@ -70,9 +70,9 @@ const teekConfig = defineTeekConfig({
     },
     titleTip: {
       backTop: "回到頂部",
-      toComment: "前往評論",
-      themeSize: "主題尺寸",
-      themeStyle: "主題樣式",
+      toComment: "前往評論區",
+      themeSize: "主題尺寸切換",
+      themeStyle: "主題樣式切換",
     },
   },
   banner: {
