@@ -17,16 +17,23 @@ const teekConfig = defineTeekConfig({
     slogan: "喵喵(?",
   },
   topArticle: {
+    title: svg => `${svg}精選文章`,
+    emptyLabel: "暫無精選文章",
   },
   category: {
-    pageTitle: "全部分類",
-    homeTitle: "文章分類",
+    pageTitle: svg => `${svg}全部分類`,
+    homeTitle: svg => `${svg}文章分類`,
     emptyLabel: "暫無文章分類",
   },
   tag: {
+    pageTitle: svg => `${svg}全部標籤`,
+    homeTitle: svg => `${svg}文章標籤`,
+    emptyLabel: "暫無熱門標籤",
   },
   friendLink: {
     enabled: true, // 是否启用友情链接卡片
+    title: svg => `${svg}友情連結`,
+    emptyLabel: "暫無友情連結",
     list: [
     ], // 友情链接数据列表
     limit: 5, // 一页显示的数量
@@ -34,6 +41,15 @@ const teekConfig = defineTeekConfig({
     scrollSpeed: 2500, // 滚动间隔时间，单位：毫秒。autoScroll 为 true 时生效
     autoPage: false, // 是否自动翻页
     pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
+  },
+  docAnalysis: {
+    enabled: false,
+    overrideInfo: [
+      { key: "runtime", show: false },
+      { key: "lastActiveTime", show: false },
+      { key: "viewCount", show: false },
+      { key: "visitCount", show: false }
+    ],
   },
   footerInfo: {
     theme: {
