@@ -5,5 +5,3 @@ layout: home
 
 tk:
   tkHome: true
-  bgColor:
-    -  #409EFF
