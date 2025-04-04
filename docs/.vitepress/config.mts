@@ -124,7 +124,7 @@ const teekConfig = defineTeekConfig({
     showTag: true, // 是否展示標籤
     titleTip: {
       author: "作者",
-      createTime: "創建時間",
+      createTime: "建立時間",
       updateTime: "更新時間",
       category: "分類",
       tag: "標籤",
@@ -247,9 +247,9 @@ export default defineConfig({
     search: {
       provider: "local",
     },
-    editLink: {
-      text: "在 GitHub 上編輯此頁",
-      pattern: "https://github.com/snowlinouo/snowlin-blog/edit/main/docs/:path",
-    },
+    // editLink: {
+    //   text: "在 GitHub 上編輯此頁",
+    //   pattern: "https://github.com/snowlinouo/snowlin-blog/edit/main/docs/:path",
+    // },
   },
 });
