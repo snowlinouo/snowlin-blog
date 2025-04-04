@@ -17,7 +17,7 @@ const teekConfig = defineTeekConfig({
     slogan: "喵喵(?",
   },
   topArticle: {
-    title: (_, svg) => `${svg}精選文章`,
+    title: svg => `${svg}精選文章`,
     emptyLabel: "暫無精選文章",
   },
   category: {
