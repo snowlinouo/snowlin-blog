@@ -246,9 +246,38 @@ export default defineConfig({
         link: 'https://github.com/snowlinouo/snowlin-blog'
       }
     ],
-
     search: {
       provider: "local",
+      options: {
+        translations: {
+          button: { buttonText: "搜尋", buttonAriaLabel: "搜尋" },
+          modal: {
+            noResultsText: "無法找到相關結果",
+            resetButtonTitle: "清除查詢條件",
+            footer: {
+              selectText: "選擇",
+              navigateText: "切換",
+              closeText: "關閉",
+            },
+          },
+        },
+        locales: {
+          cn: {
+            translations: {
+              button: { buttonText: "搜索", buttonAriaLabel: "搜索" },
+              modal: {
+                noResultsText: "无法找到相关结果",
+                resetButtonTitle: "清除查询条件",
+                footer: {
+                  selectText: "选择",
+                  navigateText: "切换",
+                  closeText: "关闭",
+                },
+              },
+            },
+          },
+        },
+      },
     },
     // editLink: {
     //   text: "在 GitHub 上編輯此頁",
