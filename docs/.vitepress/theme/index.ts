@@ -12,13 +12,16 @@ import "vitepress-theme-teek/vp-plus/mark.scss"; // 文章 mark 标签样式
 // import "vitepress-theme-teek/vp-plus/container-flow.scss"; // Markdown 容器流体样式
 import "vitepress-theme-teek/vp-plus/blockquote.scss";
 import "vitepress-theme-teek/vp-plus/index-rainbow.scss";
+
 import "vitepress-markdown-timeline/dist/theme/index.css"; // 引入时间线样式
+import "virtual:group-icons.css"; //代码组图标样式
 
 // import "./styles/style.scss";
 // import "./styles/code-bg.scss";
-import "./styles/hidden.css"
-import "./styles/text-color.css"
-import "./styles/text-markdown-color.css"
+import "./styles/index.scss";  // 引入Demo\docs-base\.vitepress\theme\style\index.scss全局样式
+import "./styles/hidden.css";
+import "./styles/text-color.css";
+import "./styles/text-markdown-color.css";
 
 export default {
   extends: Teek,

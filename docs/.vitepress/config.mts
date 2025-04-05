@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import { defineTeekConfig } from "vitepress-theme-teek/config";
 import timeline from "vitepress-markdown-timeline"; // 導入時間線插件
+import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons"; // 导入代码组图标插件
 
 import { nav } from './configs'
 import { sidebar } from './configs'
@@ -64,6 +65,13 @@ const teekConfig = defineTeekConfig({
   },
   themeSetting: {
     themeSize: "large",
+    useThemeSize: false,
+    themeSizeLabel: {
+      wide: "寬",
+      large: "長",
+      default: "預設",
+      small: "小",
+    },
     themeStyleLabel: {
       vpLabel: "VP 主題",
       vpTip: "VitePress 主題",
@@ -77,12 +85,6 @@ const teekConfig = defineTeekConfig({
       epGreen: "綠色",
       epYellow: "黃色",
       epRed: "紅色",
-    },
-    themeSizeLabel: {
-      wide: "寬",
-      large: "長",
-      default: "預設",
-      small: "小",
     },
     titleTip: {
       backTop: "回到頂部",
@@ -154,6 +156,7 @@ const teekConfig = defineTeekConfig({
   markdown: {
     config: (md) => {
       md.use(timeline); //时间线插件
+      md.use(groupIconMdPlugin); //代碼圖示
     },
   },
 });
@@ -251,5 +254,17 @@ export default defineConfig({
     //   text: "在 GitHub 上編輯此頁",
     //   pattern: "https://github.com/snowlinouo/snowlin-blog/edit/main/docs/:path",
     // },
+  },
+  vite: {
+    server: {
+      open: true
+    },
+    plugins: [
+      groupIconVitePlugin(), //代码组图标
+    ],
+    //其他配置项 
+    build: {
+      chunkSizeWarningLimit: 35000, // 限制警告的块大小
+    },
   },
 });
