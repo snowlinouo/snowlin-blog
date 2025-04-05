@@ -7,7 +7,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: []
     }
   ],
-  '/minecraft/masa-mod/': [
+  '/minecraft/masa 系列/': [
     {
       text: '介紹',
       link: 'masa-mod/masa-mod-translationpack',
