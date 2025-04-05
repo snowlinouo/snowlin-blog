@@ -220,7 +220,7 @@ export default defineConfig({
     returnToTopLabel: "返回頂部",
     lastUpdatedText: "上次更新時間",
     outline: {
-      level: [2, 4],
+      level: [2, 3],
       label: "本頁導航",
     },
     docFooter: {

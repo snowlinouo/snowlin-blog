@@ -7,6 +7,46 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: []
     }
   ],
+  '/minecraft/masa 系列/': [
+    {
+      text: '介紹',
+      link: 'masa-mod/masa-mod-translationpack',
+    },
+    {
+      text: '更新日誌',
+      collapsed: false,
+      items: [
+        {
+          text: '1.4.2',
+          link: 'masa-mod/pack-changelog#v1-4-2',
+        },
+        {
+          text: '1.4.1',
+          link: 'masa-mod/pack-changelog#v1-4-1',
+        },
+        {
+          text: '1.4.0',
+          link: 'masa-mod/pack-changelog#v1-4-0',
+        },
+        {
+          text: '1.3.6',
+          link: 'masa-mod/pack-changelog#v1-3-6',
+        },
+        {
+          text: '1.3.5',
+          link: 'masa-mod/pack-changelog#v1-3-5',
+        },
+        {
+          text: '1.3.4',
+          link: 'masa-mod/pack-changelog#v1-3-4',
+        },
+        {
+          text: '1.3.3',
+          link: 'masa-mod/pack-changelog#v1-3-3',
+        },
+      ]
+    }
+  ],
   '/sky/': [
     {
       text: '總目錄',
