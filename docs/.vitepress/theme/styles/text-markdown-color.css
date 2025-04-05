@@ -55,7 +55,7 @@
   background-color: rgba(254,254,254,0.25);
 }
 
-.note {
+.swnote {
   padding: 0.75rem;
   border-left: 0.35rem solid;
   border-radius: 0.25rem;
@@ -64,11 +64,11 @@
   transition: color 0.2s ease-in-out;
   font-size: 0.9rem;
 }
-.note a {
+.swnote a {
   color: var(--text-color);
   transition: color 0.2s ease-in-out;
 }
-.note *:last-child {
+.swnote *:last-child {
   margin-bottom: 0;
 }
 .note-default,

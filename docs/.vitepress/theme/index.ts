@@ -8,8 +8,10 @@ import "vitepress-theme-teek/vp-plus/aside.scss"; // 文章目录样式
 import "vitepress-theme-teek/vp-plus/doc-h1-gradient.scss"; // 文档以及标题样式
 import "vitepress-theme-teek/vp-plus/table.scss";
 import "vitepress-theme-teek/vp-plus/mark.scss"; // 文章 mark 标签样式
+import "vitepress-theme-teek/vp-plus/container.scss"; // Markdown 容器样式
 // import "vitepress-theme-teek/vp-plus/container-left.scss"; // Markdown 容器左框样式
 // import "vitepress-theme-teek/vp-plus/container-flow.scss"; // Markdown 容器流体样式
+// import "./styles/custom-block.scss"; // 流体边框自定义容器样式
 import "vitepress-theme-teek/vp-plus/blockquote.scss";
 import "vitepress-theme-teek/vp-plus/index-rainbow.scss";
 

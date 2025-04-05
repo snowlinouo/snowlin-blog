@@ -51,24 +51,24 @@ article: false
 ### note 容器提示框
 
 ```html
-<div class="note note-secondary">容器提示框展示</div>
-<div class="note note-primary">容器提示框展示</div>
-<div class="note note-success">容器提示框展示</div>
-<div class="note note-danger">容器提示框展示</div>
-<div class="note note-warning">容器提示框展示</div>
-<div class="note note-info">容器提示框展示</div>
-<div class="note note-light">容器提示框展示</div>
+<div class="swnote note-secondary">容器提示框展示</div>
+<div class="swnote note-primary">容器提示框展示</div>
+<div class="swnote note-success">容器提示框展示</div>
+<div class="swnote note-danger">容器提示框展示</div>
+<div class="swnote note-warning">容器提示框展示</div>
+<div class="swnote note-info">容器提示框展示</div>
+<div class="swnote note-light">容器提示框展示</div>
 ```
 
-::: details
-<div class="note note-secondary">容器提示框展示</div>
-<div class="note note-primary">容器提示框展示</div>
-<div class="note note-success">容器提示框展示</div>
-<div class="note note-danger">容器提示框展示</div>
-<div class="note note-warning">容器提示框展示</div>
-<div class="note note-info">容器提示框展示</div>
-<div class="note note-light">容器提示框展示</div>
-:::
+
+<div class="swnote note-secondary">容器提示框展示</div>
+<div class="swnote note-primary">容器提示框展示</div>
+<div class="swnote note-success">容器提示框展示</div>
+<div class="swnote note-danger">容器提示框展示</div>
+<div class="swnote note-warning">容器提示框展示</div>
+<div class="swnote note-info">容器提示框展示</div>
+<div class="swnote note-light">容器提示框展示</div>
+
 
 ### label 類文字 Code 高亮
 
