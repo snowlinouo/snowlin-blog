@@ -4,4 +4,4 @@
 layout: home
 
 tk:
-  tkHome: true
+  teekHome: true
