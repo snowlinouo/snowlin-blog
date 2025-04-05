@@ -1,7 +1,6 @@
 ---
 title: 測試區
 article: false
-outline: [2, 3, 4, 5]
 ---
 
 # 1
