@@ -12,7 +12,7 @@ const teekConfig = defineTeekConfig({
   blogger: {
     // 部落客資訊，顯示在首頁側邊欄
     avatar: "/logo.png",
-    avatarStyle: "radius",
+    shape: "circle",
     name: "雪鈴",
     slogan: "喵喵(?",
   },
