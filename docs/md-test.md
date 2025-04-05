@@ -60,7 +60,7 @@ article: false
 <div class="swnote note-light">容器提示框展示</div>
 ```
 
-
+::: details
 <div class="swnote note-secondary">容器提示框展示</div>
 <div class="swnote note-primary">容器提示框展示</div>
 <div class="swnote note-success">容器提示框展示</div>
@@ -68,7 +68,7 @@ article: false
 <div class="swnote note-warning">容器提示框展示</div>
 <div class="swnote note-info">容器提示框展示</div>
 <div class="swnote note-light">容器提示框展示</div>
-
+:::
 
 ### label 類文字 Code 高亮
 
@@ -121,12 +121,12 @@ article: false
 
 ## 文字測試區
 
-<div class="note note-secondary">
+<div class="swnote note-secondary">
   <P>容器提示框展示</p>
   <p>測試<span class="紅色">測試</span></p>
 </div>
 測試
-<div class="note note-primary">容器提示框展示</div>
+<div class="swnote note-primary">容器提示框展示</div>
 測試
 
 <div class="tip custom-block" style="padding-top: 8px"> 

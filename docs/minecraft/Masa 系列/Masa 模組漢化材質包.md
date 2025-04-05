@@ -23,7 +23,7 @@ sticky: 1
 ```
 :::
 
-<div class="note note-danger">
+<div class="swnote note-danger">
 
 **目前從 `v1.3.3` 版本開始只支援 1.21+ 以上的版本。**
 
