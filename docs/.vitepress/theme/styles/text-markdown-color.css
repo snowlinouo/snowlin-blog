@@ -68,6 +68,9 @@
   color: var(--text-color);
   transition: color 0.2s ease-in-out;
 }
+.swnote p {
+  margin: 0 0;
+}
 .swnote *:last-child {
   margin-bottom: 0;
 }
