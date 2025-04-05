@@ -151,6 +151,7 @@ const teekConfig = defineTeekConfig({
   vitePlugins: {
     sidebarOption: {
       initItems: false,
+      ignoreList: ["nav"], //忽略的文件夹和文件
     },
   },
   markdown: {
