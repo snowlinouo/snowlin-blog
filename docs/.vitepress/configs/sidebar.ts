@@ -17,32 +17,36 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false,
       items: [
         {
+          text: '目錄',
+          link: '/masa-mod/changelogs',
+        },
+        {
           text: '1.4.2',
-          link: 'masa-mod/pack-changelog#v1-4-2',
+          link: '/masa-mod/changelogs/1.4.2',
         },
         {
           text: '1.4.1',
-          link: 'masa-mod/pack-changelog#v1-4-1',
+          link: '/masa-mod/changelogs/1.4.1',
         },
         {
           text: '1.4.0',
-          link: 'masa-mod/pack-changelog#v1-4-0',
+          link: '/masa-mod/changelogs/1.4.0',
         },
         {
           text: '1.3.6',
-          link: 'masa-mod/pack-changelog#v1-3-6',
+          link: '/masa-mod/changelogs/1.3.6',
         },
         {
           text: '1.3.5',
-          link: 'masa-mod/pack-changelog#v1-3-5',
+          link: '/masa-mod/changelogs/1.3.5',
         },
         {
           text: '1.3.4',
-          link: 'masa-mod/pack-changelog#v1-3-4',
+          link: '/masa-mod/changelogs/1.3.4',
         },
         {
           text: '1.3.3',
-          link: 'masa-mod/pack-changelog#v1-3-3',
+          link: '/masa-mod/changelogs/1.3.3',
         },
       ]
     }

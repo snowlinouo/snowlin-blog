@@ -1,0 +1,21 @@
+---
+title: Masa 中文資源包更新日誌目錄
+permalink: /masa-mod/changelogs
+---
+
+# 更新版本目錄
+你可以在這邊找到各個版本的更新內容
+
+## 1.21.x 以後版本
+- [1.4.2](/masa-mod/changelogs/1.4.2)
+- [1.4.1](/masa-mod/changelogs/1.4.1)
+- [1.4.0](/masa-mod/changelogs/1.4.0)
+- [1.3.6](/masa-mod/changelogs/1.3.6)
+- [1.3.5](/masa-mod/changelogs/1.3.5)
+- [1.3.4](/masa-mod/changelogs/1.3.4)
+- [1.3.3](/masa-mod/changelogs/1.3.3)
+
+
+## 1.20 含以前版本
+- [1.0.1-1.20](/masa-mod/changelogs/1.0.1-1.20)
+- [1.0.0-1.20](/masa-mod/changelogs/1.0.0-1.20)
