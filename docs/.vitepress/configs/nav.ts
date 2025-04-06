@@ -34,5 +34,18 @@ export const nav: DefaultTheme.Config['nav'] = [
         link: '/sky/known-issues',
       },
     ],
+  },
+  {
+    text: '關於',
+    items: [
+      {
+        text: '關於本站',
+        link: '/about-website',
+      },
+      {
+        text: '友情連結',
+        link: '/friendLink',
+      },
+    ],
   }
 ]
