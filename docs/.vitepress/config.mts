@@ -17,6 +17,12 @@ const teekConfig = defineTeekConfig({
     name: "雪鈴",
     slogan: "喵喵(?",
   },
+  siteAnalytics: {
+    provider: "google",
+    options: {
+      id: "G-90WQ945DK0",
+    },
+  },
   topArticle: {
     title: svg => `${svg}精選文章`,
     emptyLabel: "暫無精選文章",
