@@ -1,6 +1,10 @@
 ---
 title: Masa 中文資源包更新日誌目錄
 permalink: /masa-mod/changelogs
+categories:
+  - Minecraft
+tags:
+  - Minecraft
 ---
 
 # 更新版本目錄
