@@ -216,6 +216,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "/logo.png",
     darkModeSwitchLabel: "主題",
+    lightModeSwitchTitle: '切換到淺色模式',
+    darkModeSwitchTitle: '切換到深色模式',
     sidebarMenuLabel: "選單",
     returnToTopLabel: "返回頂部",
     lastUpdatedText: "上次更新時間",
