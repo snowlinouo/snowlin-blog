@@ -148,6 +148,9 @@ const teekConfig = defineTeekConfig({
     separator: "/", // 面包屑分隔符
     homeLabel: "首頁",
   },
+  articleShare: {
+    enabled: true
+  },
   vitePlugins: {
     sidebarOption: {
       initItems: false,
