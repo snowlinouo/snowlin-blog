@@ -7,7 +7,7 @@ categories:
 tags:
   - Minecraft
 top: true
-sticky: 1
+sticky: 2
 ---
 # Masa 模組中文材質包
 
