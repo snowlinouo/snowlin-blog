@@ -9,13 +9,18 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'Minecraft',
     items: [
       {
-        text: '目錄',
-        link: '/minecraft/',
-      },
-      {
         text: 'Masa 模組中文材質包',
-        link: '/masa-mod/masa-mod-translationpack',
-      }
+        items: [
+          {
+            text: '介紹',
+            link: '/masa-mod/masa-mod-translationpack',
+          },
+          {
+            text: '更新日誌',
+            link: '/masa-mod/changelogs',
+          },
+        ],
+      },
     ],
   },
   {
