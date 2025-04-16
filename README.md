@@ -1,1 +1,1 @@
-https://testblog.snowlinlan.com/
+https://blog.snowlinlan.com/
