@@ -192,7 +192,10 @@ export default defineConfig({
     ],
     //其他配置项 
     build: {
-      chunkSizeWarningLimit: 35000, // 限制警告的块大小
+      chunkSizeWarningLimit: 35000, // 限制警告的块大小   
+      rollupOptions: {
+        external: ['**/_*.md'], // 忽略所有以下划线开头的 Markdown 文件
+      },
     },
   },
 });

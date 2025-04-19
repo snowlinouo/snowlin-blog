@@ -21,6 +21,7 @@ import "vitepress-theme-teek/vp-plus/index-rainbow.scss";
 
 import "vitepress-markdown-timeline/dist/theme/index.css"; // 引入时间线样式
 import "virtual:group-icons.css"; //代码组图标样式
+import NotFound from "./components/NotFound.vue"; // 导入404组件
 
 // import "./styles/style.scss";
 // import "./styles/code-bg.scss";
@@ -31,14 +32,56 @@ import "./styles/text-markdown-color.css";
 
 export default {
   extends: Teek,
+  enhanceApp({ app }) {},
   Layout: defineComponent({
     name: "LayoutProvider",
     setup() {
       return () =>
-        h(TeekLayoutProvider, null, { 
+        h(TeekLayoutProvider, null, {
+          // 自定义404页面内容
+          "not-found": () => h(NotFound), 
+          // "teek-home-before": () => h("div", null, "teek-home-before"),
+          // "teek-home-after": () => h("div", null, "teek-home-after"),
+          // "teek-home-banner-before": () => h("div", null, "teek-home-banner-before"),
+          // "teek-home-banner-after": () => h("div", null, "teek-home-banner-after"),
+          // "teek-home-banner-content-before": () => h("div", null, "teek-home-banner-content-before"),
+          // "teek-home-banner-content-after": () => h("div", null, "teek-home-banner-content-after"),
+          // "teek-home-banner-feature-after": () => h("div", null, "teek-home-banner-feature-after"),
+          // "teek-home-post-before": () => h("div", null, "teek-home-post-before"),
+          // "teek-home-post-after": () => h("div", null, "teek-home-post-after"),
+          // "teek-home-info-before": () => h("div", null, "teek-home-info-before"),
+          // "teek-home-info-after": () => h("div", null, "teek-home-info-after"),
+          // "teek-home-my-before": () => h("div", null, "teek-home-my-before"),
+          // "teek-home-my-after": () => h("div", null, "teek-home-my-after"),
+          // "teek-home-top-article-before": () => h("div", null, "teek-home-top-article-before"),
+          // "teek-home-top-article-after": () => h("div", null, "teek-home-top-article-after"),
+          // "teek-home-category-before": () => h("div", null, "teek-home-category-before"),
+          // "teek-home-category-after": () => h("div", null, "teek-home-category-after"),
+          // "teek-home-tag-before": () => h("div", null, "teek-home-tag-before"),
+          // "teek-home-tag-after": () => h("div", null, "teek-home-tag-after"),
+          // "teek-home-friend-link-before": () => h("div", null, "teek-home-friend-link-before"),
+          // "teek-home-friend-link-after": () => h("div", null, "teek-home-friend-link-after"),
+          // "teek-home-doc-analysis-before": () => h("div", null, "teek-home-doc-analysis-before"),
+          // "teek-home-doc-analysis-after": () => h("div", null, "teek-home-doc-analysis-after"),
+          // "teek-footer-before": () => h("div", null, "teek-footer-before"),
+          // "teek-footer-after": () => h("div", null, "teek-footer-after"),
+
+          // "teek-article-analyze-before": () => h("div", null, "teek-article-analyze-before"),
+          // "teek-article-analyze-after": () => h("div", null, "teek-article-analyze-after"),
+          // "teek-comment-before": () => h("div", null, "teek-comment-before"),
+          // "teek-comment-after": () => h("div", null, "teek-comment-after"),
+          // "teek-page-top-before": () => h("div", null, "teek-page-top-before"),
+          // "teek-page-top-after": () => h("div", null, "teek-page-top-after"),
+
+          // "teek-archives-top-before": () => h("div", null, "teek-archives-top-before"),
+          // "teek-archives-top-after": () => h("div", null, "teek-archives-top-after"),
+          // "teek-catalogue-top-before": () => h("div", null, "teek-catalogue-top-before"),
+          // "teek-catalogue-top-after": () => h("div", null, "teek-catalogue-top-after"),
+
+          // "teek-right-bottom-before": () => h("div", null, "teek-right-bottom-before"),
+          // "teek-right-bottom-after": () => h("div", null, "teek-right-bottom-after"),
         }
       );
     },
   }),
-  enhanceApp({ app, router }) {},
 };
