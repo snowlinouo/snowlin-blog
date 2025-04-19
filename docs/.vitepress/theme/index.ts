@@ -1,5 +1,9 @@
 import Teek from "vitepress-theme-teek";
 import "vitepress-theme-teek/index.css";
+import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
+
+import { defineComponent, h, nextTick, provide, watch } from "vue";
+
 import "vitepress-theme-teek/vp-plus/code-block-mobile.scss"; // 移动端代码块样式加 padding
 import "vitepress-theme-teek/vp-plus/sidebar.scss"; // 侧边栏字体样式
 import "vitepress-theme-teek/vp-plus/nav.scss"; // 导航栏样式
@@ -27,5 +31,14 @@ import "./styles/text-markdown-color.css";
 
 export default {
   extends: Teek,
+  Layout: defineComponent({
+    name: "LayoutProvider",
+    setup() {
+      return () =>
+        h(TeekLayoutProvider, null, { 
+        }
+      );
+    },
+  }),
   enhanceApp({ app, router }) {},
 };
