@@ -77,7 +77,10 @@ export default defineConfig({
         description,
       },
     ],
-    ["meta", { name: "keywords", description }],
+    ['meta', { name: 'keywords', description }],
+
+    ['link', { rel: 'stylesheet', href: '//at.alicdn.com/t/font_2989306_w303erbip9.css' }], // 阿里在线矢量库
+    ['link', { rel: 'stylesheet', href: '//at.alicdn.com/t/c/font_4429259_ena0fqhcv9l.css' }], // 阿里购物车项目图标库在线资源
   ],
   markdown: {
     // 開啟行號

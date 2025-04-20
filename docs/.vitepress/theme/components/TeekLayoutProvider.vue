@@ -2,7 +2,6 @@
 import Teek, { TkAvatar, teekConfigSymbol, useNamespace } from "vitepress-theme-teek";
 import { provide, ref } from "vue";
 import { teekDocConfig, teekBlogConfig } from "../config/teekConfig";
-import { zhCn, zhTw, en } from "vitepress-theme-teek"
 
 const ns = useNamespace("layout-provider");
 
@@ -60,5 +59,19 @@ $namespace: tk-layout-provider;
       user-select: none;
     }
   }
+}
+
+// 修复 twikoo 样式影响头像
+.tk-avatar {
+    width: 24px;
+    height: 24px;
+}
+</style>
+
+<style lang="scss">
+// 修复 twikoo 样式影响头像
+.tk-my__avatar .tk-avatar {
+    width: 100%;
+    height: 100%;
 }
 </style>
