@@ -1,4 +1,5 @@
 ---
+date: 2025-04-21 22:59:22
 title: Masa 模組中文材質包
 description: 專門為 Masa 系列模組做的模組中文漢化資源包
 permalink: /masa-mod/masa-mod-translationpack
@@ -9,6 +10,7 @@ tags:
 top: true
 sticky: 2
 ---
+
 # Masa 模組中文材質包
 
 ## 下載

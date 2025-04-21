@@ -2,10 +2,11 @@
 import Teek, { TkAvatar, teekConfigSymbol, useNamespace } from "vitepress-theme-teek";
 import { provide, ref } from "vue";
 import { teekDocConfig, teekBlogConfig } from "../config/teekConfig";
+import MusicPlayer from "./MusicPlayer.vue"; // 引入音乐播放器组件
 
 const ns = useNamespace("layout-provider");
 
-// 切換預設風格 文檔風(D)/部落格風(B)
+// 默认文档风
 const current = ref("B");
 
 const teekConfig = ref(current.value === "D" ? teekDocConfig : teekBlogConfig);
@@ -33,6 +34,12 @@ const handleSwitch = () => {
           <span class="name">{{ current }}</span>
         </TkAvatar>
       </div>
+
+      <MusicPlayer />
+    </template>
+
+    <template v-for="(_, name) in $slots" :key="name" #[name]>
+      <slot :name="name" />
     </template>
   </Teek.Layout>
 </template>
@@ -61,6 +68,8 @@ $namespace: tk-layout-provider;
   }
 }
 
+
+
 // 修复 twikoo 样式影响头像
 .tk-avatar {
     width: 24px;
@@ -75,3 +84,4 @@ $namespace: tk-layout-provider;
     height: 100%;
 }
 </style>
+

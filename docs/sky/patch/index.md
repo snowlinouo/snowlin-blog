@@ -1,7 +1,13 @@
 ---
+date: 2025-04-21 22:59:22
 title: 光遇更新內容目錄
 article: false
+permalink: /pages/13eecb
+categories:
+  - sky
+  - patch
 ---
+
 # 光遇更新內容目錄
 ## 0.26.X
 - [0.26.0](./0.26.0)
