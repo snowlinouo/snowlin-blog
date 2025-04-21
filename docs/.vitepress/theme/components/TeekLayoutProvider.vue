@@ -2,7 +2,7 @@
 import Teek, { TkAvatar, teekConfigSymbol, useNamespace } from "vitepress-theme-teek";
 import { provide, ref } from "vue";
 import { teekDocConfig, teekBlogConfig } from "../config/teekConfig";
-import MusicPlayer from "./MusicPlayer.vue"; // 引入音乐播放器组件
+//import MusicPlayer from "./MusicPlayer.vue"; // 引入音乐播放器组件
 
 const ns = useNamespace("layout-provider");
 
@@ -67,8 +67,6 @@ $namespace: tk-layout-provider;
     }
   }
 }
-
-
 
 // 修复 twikoo 样式影响头像
 .tk-avatar {
