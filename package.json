@@ -4,6 +4,7 @@
     "@waline/client": "^3.5.6",
     "artalk": "^2.9.1",
     "canvas-confetti": "^1.9.3",
+    "nprogress-v2": "^1.1.10",
     "oh-my-live2d": "^0.19.3",
     "parallax-js": "^3.1.0",
     "sass": "^1.86.3",
@@ -18,7 +19,10 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "node --max-old-space-size=28672 node_modules/vitepress/bin/vitepress.js build docs",
     "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.1.0"
   }
 }

@@ -3,6 +3,9 @@ import Teek, { TkAvatar, teekConfigSymbol, useNamespace } from "vitepress-theme-
 import { provide, ref } from "vue";
 import { teekDocConfig, teekBlogConfig } from "../config/teekConfig";
 //import MusicPlayer from "./MusicPlayer.vue"; // 引入音乐播放器组件
+// import TitleChange from "./TitleChange.vue"; //导入网页标题变化
+// import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
+import ScrollProgressBar from "./ScrollProgressBar.vue" //导入顶部滚动条组件
 
 const ns = useNamespace("layout-provider");
 
@@ -21,7 +24,19 @@ const handleSwitch = () => {
 </script>
 
 <template>
+  <!--网页标题变化组件  -->
+  <!-- <TitleChange /> /> -->
+
   <Teek.Layout>
+    <template #layout-top>
+      <!-- 看板娘组件 -->
+      <!-- <OhMyLive2D /> -->
+
+      <!-- 顶部滚动条组件 -->
+      <ScrollProgressBar />
+    </template>
+    
+    
     <template #nav-bar-content-after>
       <div :class="ns.b('appearance')">
         <TkAvatar
@@ -35,7 +50,7 @@ const handleSwitch = () => {
         </TkAvatar>
       </div>
 
-      <MusicPlayer />
+      <!-- <MusicPlayer /> -->
     </template>
 
     <template v-for="(_, name) in $slots" :key="name" #[name]>

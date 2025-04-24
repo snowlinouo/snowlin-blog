@@ -4,9 +4,6 @@ import type { TeekConfig } from "vitepress-theme-teek/config";
 export const teekDocConfig: TeekConfig = {
   themeSetting: {
     themeSize: "large",
-    backTopDone: TkMessage => {
-      TkMessage.success("返回頂部成功");
-    },
   },
 
   //公告栏
@@ -21,12 +18,8 @@ export const teekBlogConfig: TeekConfig = {
   teekHome: true,
   vpHome: false,
   themeSetting: {
-    themeStyle: "vp-green",
     themeSize: "default",
-    backTopDone: TkMessage => {
-      TkMessage.success("返回頂部成功");
-    },
-  },
+  }, 
   wallpaper: {
     enabled: true,
   },

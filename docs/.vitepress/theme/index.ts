@@ -46,30 +46,38 @@ import Artalk from "artalk";
 
 export default {
   extends: Teek,
-  enhanceApp({ app }) {
+  
+  async enhanceApp({ app, router }) {  //添加router
     // 注册组件
-    // app.component("confetti", confetti); //五彩纸屑
+    // app.component("confetti", confetti); //五彩纸屑  
   },
+
   Layout: defineComponent({
     name: "LayoutProvider",
     setup() {
-      const { frontmatter, isDark, page } = useData();
       const { start, stop } = useFooterRuntime();
-      const route = useRoute();
+      const props: Record<string, any> = {};
+      const { frontmatter, isDark, page } = useData();
 
       // 注入评论区实例
-      provide(walineSymbol, (options, el) => init({ serverURL: options.serverURL!, dark: options.dark, el }));
-      provide(giscusSymbol, () => Giscus);
-      provide(artalkSymbol, (options, el) =>
-        Artalk.init({
-          el,
-          darkMode: isDark.value,
-          pageKey: route.path,
-          pageTitle: page.value.title,
-          server: options.server,
-          site: options.site,
-        })
-      );
+      // provide(walineSymbol, (options, el) => init({ serverURL: options.serverURL!, dark: options.dark, el }));
+      // provide(giscusSymbol, () => Giscus);
+      // provide(artalkSymbol, (options, el) =>
+      //   Artalk.init({
+      //     el,
+      //     darkMode: isDark.value,
+      //     pageKey: route.path,
+      //     pageTitle: page.value.title,
+      //     server: options.server,
+      //     site: options.site,
+      //   })
+      // );
+
+      // 添加自定义 class 逻辑
+      if (frontmatter.value?.layoutClass) {
+        props.class = frontmatter.value.layoutClass;
+      }
+      const route = useRoute();
 
       watch(
         frontmatter,
@@ -82,8 +90,9 @@ export default {
         { immediate: true }
       );
 
+
       return () =>
-        h(TeekLayoutProvider, null, {
+        h(TeekLayoutProvider, props, {
           // "teek-notice-content": () => h(NoticeContent),
           "teek-home-banner-feature-after": () => h(BannerImgArrow),
           // 自定义404页面内容

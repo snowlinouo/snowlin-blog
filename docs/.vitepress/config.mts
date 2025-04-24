@@ -12,6 +12,13 @@ const description = ["vitepress-theme-teek 使用文档", "vitepress 主题框�
 
 const teekConfig = defineTeekConfig({
   author: { name: "雪鈴", link: "https://github.com/snowlinouo" },
+
+  themeSetting: {
+    backTopDone: (TKMessage) => {
+      TKMessage.success("返回頂部成功");
+    },
+  },
+  
   siteAnalytics: {
     provider: "google",
     options: {
@@ -148,29 +155,31 @@ export default defineConfig({
     ["link", { rel: "stylesheet", href: "//at.alicdn.com/t/font_2989306_w303erbip9.css" }], // 阿里在线矢量库
 
     // //添加看板娘
-    // ['script', { src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js' }],
+    // ['script', { src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js' }],    
 
-    //免费的音乐播放器
-    [
-      "script",
-      {
-        type: "text/javascript",
-        src: "https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js",
-        // src: "https://myhkw.cn/player/js/jquery.min.js",
-      },
-    ], 
-    [
-      "script",
-      {
-        type: "text/javascript",
-        id: "myhk",
-        src: "https://myhkw.cn/api/player/1741345067120",
-        key: "1741345067120",
-        m: "1",
-        lr: "r",
-        defer: "defer",  // 添加defer属性，确保脚本在DOM加载完成后执行
-      },
-    ],
+
+
+    // 免费的音乐播放器
+    // [
+    //   "script",
+    //   {
+    //     type: "text/javascript",
+    //     src: "https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js",
+    //     // src: "https://myhkw.cn/player/js/jquery.min.js",
+    //   },
+    // ], 
+    // [
+    //   "script",
+    //   {
+    //     type: "text/javascript",
+    //     id: "myhk",
+    //     src: "https://myhkw.cn/api/player/1741345067120",
+    //     key: "1741345067120",
+    //     m: "1",
+    //     lr: "r",
+    //     defer: "defer",  // 添加defer属性，确保脚本在DOM加载完成后执行
+    //   },
+    // ],
 
 
     //51la统计挂件
@@ -186,6 +195,17 @@ export default defineConfig({
     ], 
 
     
+    // 仅当页面包含特定 class 时加载字体
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "../theme/styles/font.scss",
+        media: "print",
+        onload: "this.media='all'",
+      },
+    ],
+
     // 鼠标爆炸效果
     // [
     //   'script',
@@ -203,7 +223,7 @@ export default defineConfig({
     //     src: 'https://live2d-hyde.netlify.app/Clickfireworks.js',
     //     defer: 'defer',
     //   },
-    // ],
+    // ],    
   ],
 
   markdown: {
@@ -328,6 +348,7 @@ export default defineConfig({
     ],
     //其他配置项 
     build: {
+      assetsInlineLimit: 4096, // 小于 4KB 的字体转为 base64
       chunkSizeWarningLimit: 35000, // 限制警告的块大小   
       rollupOptions: {
         external: ['**/_*.md'], // 忽略所有以下划线开头的 Markdown 文件
