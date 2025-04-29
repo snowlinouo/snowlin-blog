@@ -17,6 +17,24 @@ const description = ["vitepress-theme-teek 使用文档", "vitepress 主题框�
 const teekConfig = defineTeekConfig({
   author: { name: "雪鈴", link: "https://github.com/snowlinouo" },
 
+  themeEnhance: {
+    spotlight: {
+      defaultValue: false,
+    },
+    themeColor: {
+      defaultColor: "vp-green",
+    },
+    layoutSwitch: {
+      defaultMode: "bothWidthAdjustable",
+      defaultPageMaxWidth: 90,
+      defaultDocMaxWidth: 95,
+    },
+  },
+
+  backTopDone: (TKMessage) => {
+    TKMessage.success("返回頂部成功");
+  },
+
   siteAnalytics: [
     {
       provider: "google",
@@ -408,7 +426,6 @@ export default defineConfig({
         output: {
           manualChunks: {
             theme: ["vitepress-theme-teek"],
-            icons: ["@iconify/json"],
           },
         },
       },      

@@ -2,9 +2,6 @@ import type { TeekConfig } from "vitepress-theme-teek/config";
 
 // 文档配置
 export const teekDocConfig: TeekConfig = {
-  themeSetting: {
-    themeSize: "large",
-  },
 
   //公告栏
   notice: {
@@ -17,9 +14,6 @@ export const teekDocConfig: TeekConfig = {
 export const teekBlogConfig: TeekConfig = {
   teekHome: true,
   vpHome: false,
-  themeSetting: {
-    themeSize: "default",
-  }, 
   wallpaper: {
     enabled: true,
   },

@@ -27,6 +27,7 @@
     "@iconify/utils": "^2.3.0",
     "@vueuse/core": "^13.1.0",
     "rollup-plugin-visualizer": "^5.14.0",
+    "terser": "^5.39.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1"
   }

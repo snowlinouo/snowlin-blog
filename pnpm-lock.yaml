@@ -20,12 +20,15 @@ importers:
       rollup-plugin-visualizer:
         specifier: ^5.14.0
         version: 5.14.0(rollup@4.39.0)
+      terser:
+        specifier: ^5.39.0
+        version: 5.39.0
       vite-plugin-compression:
         specifier: ^0.5.1
-        version: 0.5.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3))
+        version: 0.5.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0))
       vite-plugin-imagemin:
         specifier: ^0.6.1
-        version: 0.6.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3))
+        version: 0.6.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0))
     devDependencies:
       '@giscus/vue':
         specifier: ^3.1.1
@@ -56,22 +59,22 @@ importers:
         version: 1.86.3
       vite:
         specifier: ^6.3.2
-        version: 6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)
+        version: 6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)
       vitepress:
         specifier: ^1.6.3
-        version: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)
+        version: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)
       vitepress-markdown-timeline:
         specifier: ^1.2.2
         version: 1.2.2
       vitepress-plugin-51la:
         specifier: ^0.1.0
-        version: 0.1.0(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3))
+        version: 0.1.0(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0))
       vitepress-plugin-group-icons:
         specifier: ^1.3.8
         version: 1.3.8
       vitepress-theme-teek:
         specifier: 1.1.0-alpha.2
-        version: 1.1.0-alpha.2(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3))(vue@3.5.13)
+        version: 1.1.0-alpha.2(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0))(vue@3.5.13)
       vue:
         specifier: ^3.5.13
         version: 3.5.13
@@ -521,8 +524,26 @@ packages:
     peerDependencies:
       vue: '>=3'
 
+  '@jridgewell/gen-mapping@0.3.8':
+    resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
+    engines: {node: '>=6.0.0'}
+
+  '@jridgewell/resolve-uri@3.1.2':
+    resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
+    engines: {node: '>=6.0.0'}
+
+  '@jridgewell/set-array@1.2.1':
+    resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
+    engines: {node: '>=6.0.0'}
+
+  '@jridgewell/source-map@0.3.6':
+    resolution: {integrity: sha512-1ZJTZebgqllO79ue2bm3rIGud/bOe0pP5BjSRCRxxYkEZS8STV7zN84UBbiYu7jy+eCKSnVIUgoWWE/tt+shMQ==}
+
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
+
+  '@jridgewell/trace-mapping@0.3.25':
+    resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
   '@lit-labs/ssr-dom-shim@1.3.0':
     resolution: {integrity: sha512-nQIWonJ6eFAvUUrSlwyHDm/aE8PBDu5kRpL0vHMg6K8fK3Diq1xdPjTnsJSwxABhaZ+5eBi1btQB5ShUTKo4nQ==}
@@ -1054,6 +1075,9 @@ packages:
 
   buffer-fill@1.0.0:
     resolution: {integrity: sha512-T7zexNBwiiaCOGDg9xNX9PBmjrubblRkENuptryuI64URkXDFum9il/JGL8Lm8wYfAXpredVXXZz7eMHilimiQ==}
+
+  buffer-from@1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
 
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
@@ -2591,6 +2615,9 @@ packages:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
 
+  source-map-support@0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
+
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
@@ -2729,6 +2756,11 @@ packages:
   tempfile@2.0.0:
     resolution: {integrity: sha512-ZOn6nJUgvgC09+doCEF3oB+r3ag7kUvlsXEGX069QRD60p+P3uP7XG9N2/at+EyIRGSN//ZY3LyEotA1YpmjuA==}
     engines: {node: '>=4'}
+
+  terser@5.39.0:
+    resolution: {integrity: sha512-LBAhFyLho16harJoWMg/nZsQYgTrg5jXOn2nCYjRUcZZEdE3qa2zb8QEDRUGVZBW4rlazf2fxkg8tztybTaqWw==}
+    engines: {node: '>=10'}
+    hasBin: true
 
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
@@ -3359,7 +3391,27 @@ snapshots:
       '@iconify/types': 2.0.0
       vue: 3.5.13
 
+  '@jridgewell/gen-mapping@0.3.8':
+    dependencies:
+      '@jridgewell/set-array': 1.2.1
+      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/trace-mapping': 0.3.25
+
+  '@jridgewell/resolve-uri@3.1.2': {}
+
+  '@jridgewell/set-array@1.2.1': {}
+
+  '@jridgewell/source-map@0.3.6':
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.8
+      '@jridgewell/trace-mapping': 0.3.25
+
   '@jridgewell/sourcemap-codec@1.5.0': {}
+
+  '@jridgewell/trace-mapping@0.3.25':
+    dependencies:
+      '@jridgewell/resolve-uri': 3.1.2
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@lit-labs/ssr-dom-shim@1.3.0': {}
 
@@ -3623,9 +3675,9 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-vue@5.2.3(vite@5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3))(vue@3.5.13)':
+  '@vitejs/plugin-vue@5.2.3(vite@5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0))(vue@3.5.13)':
     dependencies:
-      vite: 5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)
+      vite: 5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)
       vue: 3.5.13
 
   '@vue/compiler-core@3.5.13':
@@ -3875,6 +3927,8 @@ snapshots:
   buffer-crc32@0.2.13: {}
 
   buffer-fill@1.0.0: {}
+
+  buffer-from@1.1.2: {}
 
   buffer@5.7.1:
     dependencies:
@@ -5474,6 +5528,11 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
+  source-map-support@0.5.21:
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+
   source-map@0.6.1: {}
 
   source-map@0.7.4: {}
@@ -5606,6 +5665,13 @@ snapshots:
       temp-dir: 1.0.0
       uuid: 3.4.0
 
+  terser@5.39.0:
+    dependencies:
+      '@jridgewell/source-map': 0.3.6
+      acorn: 8.14.1
+      commander: 2.20.3
+      source-map-support: 0.5.21
+
   through@2.3.8: {}
 
   timed-out@4.0.1: {}
@@ -5704,16 +5770,16 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-compression@0.5.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)):
+  vite-plugin-compression@0.5.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)):
     dependencies:
       chalk: 4.1.2
       debug: 4.4.0
       fs-extra: 10.1.0
-      vite: 6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)
+      vite: 6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-imagemin@0.6.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)):
+  vite-plugin-imagemin@0.6.1(vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)):
     dependencies:
       '@types/imagemin': 7.0.1
       '@types/imagemin-gifsicle': 7.0.4
@@ -5738,11 +5804,11 @@ snapshots:
       imagemin-webp: 6.1.0
       jpegtran-bin: 6.0.1
       pathe: 0.2.0
-      vite: 6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)
+      vite: 6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3):
+  vite@5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.3
@@ -5752,8 +5818,9 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.86.3
       sass-embedded: 1.86.3
+      terser: 5.39.0
 
-  vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3):
+  vite@6.3.2(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0):
     dependencies:
       esbuild: 0.25.2
       fdir: 6.4.3(picomatch@4.0.2)
@@ -5766,14 +5833,15 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.86.3
       sass-embedded: 1.86.3
+      terser: 5.39.0
 
   vitepress-markdown-timeline@1.2.2:
     dependencies:
       dayjs: 1.11.13
 
-  vitepress-plugin-51la@0.1.0(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)):
+  vitepress-plugin-51la@0.1.0(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)):
     dependencies:
-      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)
+      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)
 
   vitepress-plugin-auto-frontmatter@1.0.7:
     dependencies:
@@ -5791,12 +5859,12 @@ snapshots:
       gray-matter: 4.0.3
       picocolors: 1.1.1
 
-  vitepress-plugin-file-content-loader@1.0.12(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)):
+  vitepress-plugin-file-content-loader@1.0.12(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)):
     dependencies:
       gray-matter: 4.0.3
       picocolors: 1.1.1
       tinyglobby: 0.2.12
-      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)
+      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)
 
   vitepress-plugin-group-icons@1.3.8:
     dependencies:
@@ -5810,36 +5878,36 @@ snapshots:
     dependencies:
       gray-matter: 4.0.3
 
-  vitepress-plugin-permalink@1.0.19(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)):
+  vitepress-plugin-permalink@1.0.19(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)):
     dependencies:
       gray-matter: 4.0.3
       picocolors: 1.1.1
-      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)
+      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)
 
-  vitepress-plugin-sidebar-resolve@1.0.8(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)):
+  vitepress-plugin-sidebar-resolve@1.0.8(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)):
     dependencies:
       gray-matter: 4.0.3
       picocolors: 1.1.1
-      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)
+      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)
 
-  vitepress-theme-teek@1.1.0-alpha.2(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3))(vue@3.5.13):
+  vitepress-theme-teek@1.1.0-alpha.2(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0))(vue@3.5.13):
     dependencies:
       '@iconify/vue': 4.3.0(vue@3.5.13)
       gray-matter: 4.0.3
       js-yaml: 4.1.0
       markdown-it-container: 4.0.0
-      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)
+      vitepress: 1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0)
       vitepress-plugin-auto-frontmatter: 1.0.7
       vitepress-plugin-catalogue: 1.0.15
       vitepress-plugin-doc-analysis: 1.0.10
-      vitepress-plugin-file-content-loader: 1.0.12(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3))
+      vitepress-plugin-file-content-loader: 1.0.12(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0))
       vitepress-plugin-md-h1: 1.0.8
-      vitepress-plugin-permalink: 1.0.19(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3))
-      vitepress-plugin-sidebar-resolve: 1.0.8(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3))
+      vitepress-plugin-permalink: 1.0.19(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0))
+      vitepress-plugin-sidebar-resolve: 1.0.8(vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0))
     transitivePeerDependencies:
       - vue
 
-  vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3):
+  vitepress@1.6.3(@algolia/client-search@5.23.2)(@types/node@22.15.2)(async-validator@4.2.5)(postcss@8.5.3)(sass-embedded@1.86.3)(sass@1.86.3)(search-insights@2.17.3)(terser@5.39.0):
     dependencies:
       '@docsearch/css': 3.8.2
       '@docsearch/js': 3.8.2(@algolia/client-search@5.23.2)(search-insights@2.17.3)
@@ -5848,7 +5916,7 @@ snapshots:
       '@shikijs/transformers': 2.5.0
       '@shikijs/types': 2.5.0
       '@types/markdown-it': 14.1.2
-      '@vitejs/plugin-vue': 5.2.3(vite@5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3))(vue@3.5.13)
+      '@vitejs/plugin-vue': 5.2.3(vite@5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0))(vue@3.5.13)
       '@vue/devtools-api': 7.7.2
       '@vue/shared': 3.5.13
       '@vueuse/core': 12.8.2
@@ -5857,7 +5925,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 7.1.2
       shiki: 2.5.0
-      vite: 5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)
+      vite: 5.4.17(@types/node@22.15.2)(sass-embedded@1.86.3)(sass@1.86.3)(terser@5.39.0)
       vue: 3.5.13
     optionalDependencies:
       postcss: 8.5.3
