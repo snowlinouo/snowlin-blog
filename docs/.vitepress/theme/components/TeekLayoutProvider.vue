@@ -1,7 +1,9 @@
 <script setup lang="ts" name="TeekLayoutProvider">
-import Teek, { TkAvatar, teekConfigSymbol, useNamespace } from "vitepress-theme-teek";
+import Teek, { TkAvatar, teekConfigContext, useNamespace } from "vitepress-theme-teek";
 import { provide, ref } from "vue";
 import { teekDocConfig, teekBlogConfig } from "../config/teekConfig";
+import zhTw from "../locale/zh-tw";
+
 //import MusicPlayer from "./MusicPlayer.vue"; // 引入音乐播放器组件
 // import TitleChange from "./TitleChange.vue"; //导入网页标题变化
 // import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
@@ -13,7 +15,7 @@ const ns = useNamespace("layout-provider");
 const current = ref("B");
 
 const teekConfig = ref(current.value === "D" ? teekDocConfig : teekBlogConfig);
-provide(teekConfigSymbol, teekConfig);
+provide(teekConfigContext, teekConfig);
 
 const handleSwitch = () => {
   current.value = current.value === "D" ? "B" : "D";
@@ -26,8 +28,7 @@ const handleSwitch = () => {
 <template>
   <!--网页标题变化组件  -->
   <!-- <TitleChange /> /> -->
-
-  <Teek.Layout>
+  <Teek.Layout :locale="zhTw">
     <template #layout-top>
       <!-- 看板娘组件 -->
       <!-- <OhMyLive2D /> -->

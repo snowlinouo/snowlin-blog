@@ -5,6 +5,10 @@ import timeline from "vitepress-markdown-timeline"; // 导入时间线插件
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons"; // 导入代码组图标插件
 import { La51Plugin } from "vitepress-plugin-51la"; //导入 51la统计
 
+import viteCompression from "vite-plugin-compression"; //导入压缩插件
+import { visualizer } from "rollup-plugin-visualizer"; // 导入可视化分析插件
+import viteImagemin from "vite-plugin-imagemin"; // 导入图片压缩插件
+
 import { nav } from './configs'
 import { sidebar } from './configs'
 
@@ -13,18 +17,14 @@ const description = ["vitepress-theme-teek 使用文档", "vitepress 主题框�
 const teekConfig = defineTeekConfig({
   author: { name: "雪鈴", link: "https://github.com/snowlinouo" },
 
-  themeSetting: {
-    backTopDone: (TKMessage) => {
-      TKMessage.success("返回頂部成功");
+  siteAnalytics: [
+    {
+      provider: "google",
+      options: {
+        id: "G-90WQ945DK0",
+      },
     },
-  },
-  
-  siteAnalytics: {
-    provider: "google",
-    options: {
-      id: "G-90WQ945DK0",
-    },
-  },
+  ],
   footerInfo: {
     // bottomMessage: ["初闻不知曲中意，再听已是曲中人"],
     // topMessage: ["初闻不知曲中意，再听已是曲中人"],
@@ -152,7 +152,14 @@ export default defineConfig({
     ],
     ["meta", { name: "keywords", description }],
 
-    ["link", { rel: "stylesheet", href: "//at.alicdn.com/t/font_2989306_w303erbip9.css" }], // 阿里在线矢量库
+    // 阿里在线矢量库
+  [
+    "link",
+    {
+      rel: "stylesheet",
+      href: "//at.alicdn.com/t/font_2989306_w303erbip9.css",
+    },
+  ],
 
     // //添加看板娘
     // ['script', { src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js' }],    
@@ -338,7 +345,23 @@ export default defineConfig({
       open: true
     },
     plugins: [
-      groupIconVitePlugin(), //代码组图标
+      groupIconVitePlugin(),
+      viteCompression({
+        threshold: 10240,
+        algorithm: "brotliCompress",
+        ext: ".br",
+      }),
+      viteImagemin({
+        gifsicle: { optimizationLevel: 7 },
+        mozjpeg: { quality: 70 },
+        pngquant: { quality: [0.7, 0.8] },
+        svgo: {
+          plugins: [
+            { name: "removeViewBox" },
+            { name: "removeEmptyAttrs", active: false },
+          ],
+        },
+      }),
 
       La51Plugin({
         id: "你id",
@@ -349,9 +372,45 @@ export default defineConfig({
     //其他配置项 
     build: {
       assetsInlineLimit: 4096, // 小于 4KB 的字体转为 base64
-      chunkSizeWarningLimit: 35000, // 限制警告的块大小   
+      chunkSizeWarningLimit: 35000, // 限制警告的块大小
+      minify: "terser", // 使用 Terser 进行代码压缩
+      terserOptions: {
+        compress: {
+          drop_console: true, // 移除所有 console.* 调用（生产环境建议开启）
+          drop_debugger: true, // 移除 debugger 语句（生产环境必备）
+          pure_funcs: ["console.info"], // 保留 console.info 调用（白名单机制）
+          dead_code: true, // 移除不可达代码（消除死代码）
+          arrows: true, // 将 function 转换为箭头函数（优化代码体积）
+          unused: true, // 移除未使用的变量/函数（需确保不影响程序逻辑）
+          join_vars: true, // 合并连续 var 声明（优化作用域）
+          collapse_vars: true, // 内联单次使用的变量（体积优化）
+        },
+        format: {
+          comments: false, // 移除所有注释（保留版权声明需使用正则表达式）
+          beautify: false, // 禁用代码美化（进一步减小体积）
+          preamble: "/* 项目版本 1.0.0 */", // 文件头部添加版权声明（需遵守 MIT 协议）
+        },
+        mangle: {
+          toplevel: true, // 混淆顶级作用域变量名（保留 class/function 名称）
+          properties: false, // 保留对象属性名（防止破坏 DOM 属性绑定）
+        },
+      },
       rollupOptions: {
         external: ['**/_*.md'], // 忽略所有以下划线开头的 Markdown 文件
+        plugins: [
+          visualizer({
+            filename: "../stats.html",
+            open: true,
+            gzipSize: true,
+            brotliSize: true,
+          }),
+        ],
+        output: {
+          manualChunks: {
+            theme: ["vitepress-theme-teek"],
+            icons: ["@iconify/json"],
+          },
+        },
       },      
     },
   },    
