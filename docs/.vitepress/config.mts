@@ -360,14 +360,18 @@ export default defineConfig({
   // 运行后自动打开网页
   vite: {
     server: {
-      open: true
+      // host: "127.0.0.1", // 指定服务器应该监听哪个 IP 地址
+      // port: 5173, // 指定开发服务器端口
+      strictPort: true, // 若端口已被占用则会直接退出
+      open: true, // 运行后自动打开网页
     },
     plugins: [
       groupIconVitePlugin(),
       viteCompression({
-        threshold: 10240,
-        algorithm: "brotliCompress",
-        ext: ".br",
+        verbose: true, // 是否在控制台中输出压缩结果，默认为 false
+        threshold: 10240, // 如果体积大于阈值，将被压缩，单位为b，体积过小时请不要压缩，以免适得其反
+        algorithm: "gzip", // 压缩算法，可选['gzip'，' brotliccompress '，'deflate '，'deflateRaw']
+        ext: ".gz",
       }),
       viteImagemin({
         gifsicle: { optimizationLevel: 7 },
@@ -389,8 +393,8 @@ export default defineConfig({
     ],
     //其他配置项 
     build: {
-      assetsInlineLimit: 4096, // 小于 4KB 的字体转为 base64
       chunkSizeWarningLimit: 35000, // 限制警告的块大小
+      assetsInlineLimit: 4096, // 小于 4KB 的字体转为 base64
       minify: "terser", // 使用 Terser 进行代码压缩
       terserOptions: {
         compress: {
@@ -419,7 +423,7 @@ export default defineConfig({
           visualizer({
             filename: "../stats.html",
             open: true,
-            gzipSize: true,
+            gzipSize: true, // 压缩大小
             brotliSize: true,
           }),
         ],
