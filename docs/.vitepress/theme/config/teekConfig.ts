@@ -21,7 +21,6 @@ export const teekBlogConfig: TeekConfig = {
   post: {
     excerptPosition: "top", // 文章摘要位置
     showMore: false, // 是否顯示更多按鈕
-    moreLabel: "閱讀全文 >", // 更多按鈕文字
     coverImgMode: "default", // 文章封面圖模式
     showCapture: false, // 是否在摘要位置顯示文章部分文字，當為 true 且不使用 frontmatter.describe 和 <!-- more --> 時，會自動截取前 400 個字元作為摘要
     imageViewer: {
