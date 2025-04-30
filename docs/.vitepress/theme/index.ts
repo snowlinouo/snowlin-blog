@@ -6,7 +6,7 @@ import BannerImgArrow from "./components/BannerImgArrow.vue";
 
 import { defineComponent, h, nextTick, provide, watch } from "vue";
 import { useData, useRoute } from "vitepress";
-import  { artalkSymbol, giscusSymbol, walineSymbol } from "vitepress-theme-teek";
+// import  { artalkSymbol, giscusSymbol, walineSymbol } from "vitepress-theme-teek";
 
 import "vitepress-theme-teek/vp-plus/code-block-mobile.scss"; // 移动端代码块样式加 padding
 import "vitepress-theme-teek/vp-plus/sidebar.scss"; // 侧边栏字体样式
@@ -37,11 +37,11 @@ import NotFound from "./components/NotFound.vue"; // 导入404组件
 
 
 // 评论组件
-import { init } from "@waline/client";
-import "@waline/client/style";
-import Giscus from "@giscus/vue";
-import "artalk/Artalk.css";
-import Artalk from "artalk";
+// import { init } from "@waline/client";
+// import "@waline/client/style";
+// import Giscus from "@giscus/vue";
+// import "artalk/Artalk.css";
+// import Artalk from "artalk";
 
 
 export default {
