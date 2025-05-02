@@ -9,7 +9,7 @@ const props = defineProps({
   },
   returnTitle: {
     type: String,
-    default: "♪(^∇^*)欢迎回来！",
+    default: "♪(^∇^*) 歡迎回來！",
   },
 });
 
