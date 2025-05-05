@@ -31,8 +31,13 @@ const teekConfig = defineTeekConfig({
     },
   },
 
-  backTopDone: (TKMessage) => {
-    TKMessage.success("返回頂部成功");
+  backTopDone: (TKMessage) => TKMessage.success("返回頂部成功"),
+  toCommentDone: (TkMessage) => TkMessage.success("已抵達評論區"),
+
+  codeBlock: {
+    disabled: true, // 是否禁用新版代码块
+    collapseHeight: 700, // 超出高度后自动折叠，设置 true 则默认折叠，false 则默认不折叠
+    copiedDone: (TkMessage) => TkMessage.success("複製成功！"),
   },
 
   siteAnalytics: [
