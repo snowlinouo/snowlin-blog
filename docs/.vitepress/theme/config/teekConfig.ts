@@ -133,26 +133,22 @@ export const teekBlogConfig: TeekConfig = {
   // 社交链接
   social: [
     {
-      icon: "icon-youtube",
-      iconType: "iconfont",
+      icon: "mdi:youtube",
       name: "Youtube",
       link: 'https://www.youtube.com/@nightsnowlin'
     },
     {
-      icon: "icon-facebook",
-      iconType: "iconfont",
+      icon: "mdi:facebook",
       name: "Facebook",
       link: 'https://www.facebook.com/SnowLinOuO/'
     },
     {
-      icon: "icon-twitter",
-      iconType: "iconfont",
+      icon: "mdi:twitter",
       name: "Twitter",
       link: 'https://x.com/nightsnowlin'
     },
     {
-      icon: "icon-github",
-      iconType: "iconfont",
+      icon: "mdi:github",
       name: "GitHub",
       link: 'https://github.com/snowlinouo/snowlin-blog'
     },
