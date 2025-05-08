@@ -104,6 +104,12 @@ export const teekBlogConfig: TeekConfig = {
           link: "https://vp.teek.top/",
         },
         {
+          avatar: "https://cdn.jsdelivr.net/gh/Kele-Bingtang/static/user/avatar2.png",
+          name: "天客",
+          desc: "Teek 主題的作者",
+          link: "http://notes.teek.top/",
+        },
+        {
           avatar: "/img/friends/one.png",
           name: "One",
           desc: "明心静性，爱自己",
@@ -127,6 +133,7 @@ export const teekBlogConfig: TeekConfig = {
     scrollSpeed: 2500, // 滚动间隔时间，单位：毫秒。autoScroll 为 true 时生效
     autoPage: false, // 是否自动翻页
     pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
+    titleClick: router => router.go("/friendLink"), // 查看更多友链
   },
 
 
@@ -160,7 +167,6 @@ export const teekBlogConfig: TeekConfig = {
     options: {
       // twikoo 配置，官网：https://twikoo.js.org/
       envId: "https://twikoo.onedayxyy.cn/",
-      link: "https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.min.js",
 
       // waline 配置，官网：https://waline.js.org/
       // serverURL: "https://tk.waline.youngkbt.cn/",
