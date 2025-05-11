@@ -35,6 +35,16 @@ export default {
         category: "分類",
         tag: "標籤",
       },
+      articleOverview: {
+        label: "文章清單",
+        overview: " 清單",
+        category: " 目錄",
+        name: "文章目錄",
+        title: "文章標題",
+        date: "發布時間",
+        wordCount: "文章字數",
+        readingTime: "預估閱讀時長",
+      },
       articleShare: {
         label: "文章分享",
         text: "分享此頁面",
@@ -121,10 +131,10 @@ export default {
         label: "首頁站點分析卡片",
       },
       friendLinkCard: {
-        title: "{icon}友誼連結",
-        emptyLabel: "暫無友誼連結",
-        label: "首頁友誼連結卡片",
-        listLabel: "友誼連結列表",
+        title: "{icon}友情連結",
+        emptyLabel: "暫無友情連結",
+        label: "首頁友情連結卡片",
+        listLabel: "友情連結列表",
       },
       myCard: {
         label: "我的資訊卡片",
