@@ -18,6 +18,14 @@ const teekConfig = ref(teekDocConfig);
 provide(teekConfigContext, teekConfig);
 
 const configSwitchRef = useTemplateRef("configSwitchRef");
+
+watch(
+  () => configSwitchRef.value?.teekConfig,
+  async newVal => {
+    if (newVal) teekConfig.value = newVal;
+  }
+);
+
 </script>
 
 <template>
