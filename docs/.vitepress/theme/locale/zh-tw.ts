@@ -50,10 +50,12 @@ export default {
         text: "分享此頁面",
         copiedText: "連結已複製",
       },
+      articleUpdate: {
+        label: "最近更新",
+      },
       catalogue: {
         label: "目錄頁",
         title: "目錄",
-        docLabel: "文檔內容",
       },
       demoCode: {
         playground: "在 Playground 中編輯",

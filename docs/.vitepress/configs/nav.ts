@@ -51,6 +51,10 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: '友情連結',
         link: '/friendLink',
       },
+      {
+        text: '文章清單',
+        link: '/articleOverview',
+      },
     ],
   }
 ]
