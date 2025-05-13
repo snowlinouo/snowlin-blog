@@ -142,7 +142,7 @@ export const teekBlogParkConfig: TeekConfig = {
   banner: {
     name: "SnowLin Blog",
     bgStyle: "partImg",
-    imgSrc: ["bg1.jpg"],
+    imgSrc: ["/bg1.jpg"],
     description: [
       "一個溫暖的地方",
     ],
@@ -160,7 +160,7 @@ export const teekBlogCardConfig: TeekConfig = {
   banner: {
     name: "SnowLin Blog",
     bgStyle: "fullImg",
-    imgSrc: ["bg1.jpg"],
+    imgSrc: ["/bg1.jpg"],
     description: [
       "一個溫暖的地方",
     ],
@@ -177,7 +177,7 @@ export const teekBlogFullConfig: TeekConfig = {
   banner: {
     name: "SnowLin Blog",
     bgStyle: "fullImg",
-    imgSrc: ["bg1.jpg"],
+    imgSrc: ["/bg1.jpg"],
     description: [
       "一個溫暖的地方",
     ],
@@ -219,6 +219,6 @@ export const teekBlogBodyConfig: TeekConfig = {
   ...teekBlogCommonConfig,
   pageStyle: "segment-nav",
   bodyBgImg: {
-    imgSrc: ["bg1.jpg"],
+    imgSrc: ["/bg1.jpg"],
   },
 };

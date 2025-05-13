@@ -14,33 +14,33 @@ import {
 
 const ns = "config-switch";
 const tipInfo = {
-  title: "配置切换",
-  desc: "配置切换是 Teek 文档项目通过插槽额外实现的功能，并非是 Teek 增强面板自带的功能。",
+  title: "配置切換",
+  desc: "配置切換是 Teek 文件項目通過插槽額外實現的功能，並非是 Teek 增強面板自帶的功能。",
   tips: [
-    { title: "说明 1", content: "这里预设了一些 Teek 的配置模板，点击可快速切换查看效果" },
+    { title: "說明 1", content: "這裡預設了一些 Teek 的配置模板，點擊可快速切換查看效果" },
     {
-      title: "说明 2",
-      content: "您可以点击 Copy 按钮来复制配置项到您的项目 config.mts 文件里，这给第一次使用 Teek 的用户提供开箱帮助",
+      title: "說明 2",
+      content: "您可以點擊 Copy 按鈕來複製配置項到您的項目 config.mts 文件裡，這給第一次使用 Teek 的用戶提供開箱幫助",
     },
     {
-      title: "说明 3",
+      title: "說明 3",
       content:
-        "除了这里提供的配置模板，Teek 文档自己单独使用了一些公共配置项，具体请看 Teek 的 config.mts 文件，也就是说您要完全达到当前预览的效果，需要 Copy 当前的配置模板 + Teek 文档单独的配置",
+        "除了這裡提供的配置模板，Teek 文件自己單獨使用了一些公共配置項，具體請看 Teek 的 config.mts 文件，也就是說您要完全達到當前預覽的效果，需要 Copy 當前的配置模板 + Teek 文件單獨的配置",
     },
   ],
 };
 const segmentedOptions = [
-  { value: "doc", label: "文档默认", title: "默认风格" },
-  { value: "blog", label: "博客默认", title: "首页默认风格" },
-  { value: "blog-part", label: "博客小图", title: "首页 Banner 小图" },
-  { value: "blog-full", label: "博客大图", title: "首页 Banner 大图 + 评论" },
-  { value: "blog-body", label: "博客全图", title: "全站背景图" },
-  { value: "blog-card", label: "博客卡片", title: "首页卡片文章列表 + 左侧卡片栏列表" },
+  { value: "doc", label: "文檔預設", title: "預設風格" },
+  { value: "blog", label: "Blog 預設", title: "首頁預設風格" },
+  { value: "blog-part", label: "Blog 小圖", title: "首頁 Banner 小圖" },
+  { value: "blog-full", label: "Blog 大圖", title: "首頁 Banner 大圖 + 評論" },
+  { value: "blog-body", label: "Blog 全圖", title: "全站背景圖" },
+  { value: "blog-card", label: "Blog 卡片", title: "首頁卡片文章列表 + 左側卡片欄列表" },
 ];
 
 // 默认文档风格
-const themeStyle = ref("doc");
-const teekConfig = ref(teekDocConfig);
+const themeStyle = ref("blog-full");
+const teekConfig = ref(teekBlogFullConfig);
 
 const { copy, copied } = useClipboard();
 
@@ -67,8 +67,8 @@ watch(themeStyle, update);
 const handleCopy = async () => {
   await copy(JSON.stringify(teekConfig.value, null, 2));
   copied.value
-    ? TkMessage.success({ message: "复制成功！", plain: true })
-    : TkMessage.error({ message: "复制失败！", plain: true });
+    ? TkMessage.success({ message: "複製成功！", plain: true })
+    : TkMessage.error({ message: "複製失敗！", plain: true });
 };
 
 defineExpose({ themeStyle, teekConfig });
