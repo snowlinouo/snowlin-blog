@@ -93,7 +93,7 @@ const teekConfig = defineTeekConfig({
     //   { key: "lastActiveTime", value: (_, currentValue) => `${currentValue}前` },
     //   { key: "totalPosts", label: "文章总数目" },
     // ],
-    appendInfo: [{ key: "index", label: "序号", value: "SnowLin" }],
+    appendInfo: [{ key: "index", label: "序號", value: "SnowLin" }],
   },
 
   // 赞赏在文章下方
