@@ -11,45 +11,12 @@ export const teekDocConfig: TeekConfig = {
 };
 
 // 博客配置
-export const teekBlogConfig: TeekConfig = {
+const teekBlogCommonConfig: TeekConfig = {
   teekHome: true,
   vpHome: false,
   wallpaper: {
     enabled: true,
   },
-
-  post: {
-    excerptPosition: "top", // 文章摘要位置
-    showMore: false, // 是否顯示更多按鈕
-    coverImgMode: "default", // 文章封面圖模式
-    showCapture: false, // 是否在摘要位置顯示文章部分文字，當為 true 且不使用 frontmatter.describe 和 <!-- more --> 時，會自動截取前 400 個字元作為摘要
-    imageViewer: {
-      hideOnClickModal: true,
-    },
-  },
-
-  banner: {
-    name: "SnowLin Blog",
-    enabled: true,
-    bgStyle: "fullImg", // Banner 背景風格：pure 為純色背景，partImg 為局部圖片背景，fullImg 為全螢幕圖片背景
-    imgInterval: 8000,  // 當多張圖片時（imgSrc 為數組），設置切換時間，單位：毫秒
-    imgShuffle: true,  // 当多张大图时（imgSrc 为数组），设置切换时间，单位：毫秒
-    imgSrc: ["/bg1.jpg"], // Banner 圖片連結。bgStyle 為 partImg 或 fullImg 時生效
-    descStyle: "types", // 描述資訊風格：default 為純文字渲染風格（如果 description 為數組，則取第一個），types 為文字列印風格，switch 為文字切換風格
-    // descStyle: "types", // 描述信息风格：default 为纯文字渲染风格（如果 description 为数组，则取第一个），types 为文字打印风格，switch 为文字切换风格
-    mask: false, // Banner 圖片遮罩，bgStyle 為 partImg 或 fullImg 時生效
-    maskBg: "rgba(0, 0, 0, 0.4)", // Banner 大图遮罩颜色，如果为数字，则是 rgba(0, 0, 0, ${maskBg})，如果为字符串，则作为背景色
-    textColor: "#ffffff", // Banner 字体颜色，bgStyle 为 default 时为 '#000000'，其他为 '#ffffff'
-    titleFontSize: "3.2rem", // 标题字体大小
-    descFontSize: "1.4rem", // 描述字体大小
-    description: ["一個溫暖的地方"], // 描述資訊
-    switchTime: 4000, // 描述信息切换间隔时间，单位：毫秒。descStyle 为 switch 时生效
-    switchShuffle: false, // 描述信息是否随机切换，为 false 时按顺序切换。descStyle 为 switch 时生效
-    typesInTime: 200, // 输出一个文字的时间，单位：毫秒。descStyle 为 types 时生效
-    typesOutTime: 100, // 删除一个文字的时间，单位：毫秒。descStyle 为 types 时生效
-    typesNextTime: 800, // 打字与删字的间隔时间，单位：毫秒。descStyle 为 types 时生效
-    typesShuffle: false, // 描述信息是否随机打字，为 false 时按顺序打字，descStyle 为 types 时生效
-  }, 
 
   blogger: {
     avatar: "/logo.png",
@@ -104,6 +71,12 @@ export const teekBlogConfig: TeekConfig = {
           link: "https://vp.teek.top/",
         },
         {
+          avatar: "https://cdn.jsdelivr.net/gh/Kele-Bingtang/static/user/avatar2.png",
+          name: "天客",
+          desc: "Teek 主題的作者",
+          link: "http://notes.teek.top/",
+        },
+        {
           avatar: "/img/friends/one.png",
           name: "One",
           desc: "明心静性，爱自己",
@@ -127,36 +100,89 @@ export const teekBlogConfig: TeekConfig = {
     scrollSpeed: 2500, // 滚动间隔时间，单位：毫秒。autoScroll 为 true 时生效
     autoPage: false, // 是否自动翻页
     pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
+    titleClick: router => router.go("/friendLink"), // 查看更多友链
   },
 
 
   // 社交链接
   social: [
     {
-      icon: "icon-youtube",
-      iconType: "iconfont",
+      icon: "mdi:youtube",
       name: "Youtube",
       link: 'https://www.youtube.com/@nightsnowlin'
     },
     {
-      icon: "icon-facebook",
-      iconType: "iconfont",
+      icon: "mdi:facebook",
       name: "Facebook",
       link: 'https://www.facebook.com/SnowLinOuO/'
     },
     {
-      icon: "icon-twitter",
-      iconType: "iconfont",
+      icon: "mdi:twitter",
       name: "Twitter",
       link: 'https://x.com/nightsnowlin'
     },
     {
-      icon: "icon-github",
-      iconType: "iconfont",
+      icon: "mdi:github",
       name: "GitHub",
       link: 'https://github.com/snowlinouo/snowlin-blog'
     },
   ],
+};
+
+export const teekBlogConfig: TeekConfig = {
+  ...teekBlogCommonConfig,
+  banner: {
+    name: "SnowLin Blog",
+    description: "一個溫暖的地方",
+  },
+};
+
+export const teekBlogParkConfig: TeekConfig = {
+  ...teekBlogCommonConfig,
+  banner: {
+    name: "SnowLin Blog",
+    bgStyle: "partImg",
+    imgSrc: ["/bg1.jpg"],
+    description: [
+      "一個溫暖的地方",
+    ],
+    descStyle: "switch",
+  },
+};
+
+export const teekBlogCardConfig: TeekConfig = {
+  ...teekBlogCommonConfig,
+  post: {
+    imageViewer: { hideOnClickModal: true },
+    postStyle: "card",
+  },
+  homeCardListPosition: "left",
+  banner: {
+    name: "SnowLin Blog",
+    bgStyle: "fullImg",
+    imgSrc: ["/bg1.jpg"],
+    description: [
+      "一個溫暖的地方",
+    ],
+    descStyle: "types",
+  },
+};
+
+export const teekBlogFullConfig: TeekConfig = {
+  ...teekBlogCommonConfig,
+  post: {
+    imageViewer: { hideOnClickModal: true },
+    coverImgMode: "full",
+  },
+  banner: {
+    name: "SnowLin Blog",
+    bgStyle: "fullImg",
+    imgSrc: ["/bg1.jpg"],
+    description: [
+      "一個溫暖的地方",
+    ],
+    descStyle: "types",
+  },
 
   comment: {
     // provider: "giscus",
@@ -164,7 +190,6 @@ export const teekBlogConfig: TeekConfig = {
     options: {
       // twikoo 配置，官网：https://twikoo.js.org/
       envId: "https://twikoo.onedayxyy.cn/",
-      link: "https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.min.js",
 
       // waline 配置，官网：https://waline.js.org/
       // serverURL: "https://tk.waline.youngkbt.cn/",
@@ -187,5 +212,13 @@ export const teekBlogConfig: TeekConfig = {
   notice: {
     enabled: false,
     position: "center",
+  },
+};
+
+export const teekBlogBodyConfig: TeekConfig = {
+  ...teekBlogCommonConfig,
+  pageStyle: "segment-nav",
+  bodyBgImg: {
+    imgSrc: ["/bg1.jpg"],
   },
 };

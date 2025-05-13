@@ -1,27 +1,31 @@
 <script setup lang="ts" name="TeekLayoutProvider">
-import Teek, { TkAvatar, teekConfigContext, useNamespace } from "vitepress-theme-teek";
-import { provide, ref } from "vue";
-import { teekDocConfig, teekBlogConfig } from "../config/teekConfig";
+import Teek, { teekConfigContext, clockIcon } from "vitepress-theme-teek";
 import zhTw from "../locale/zh-tw";
+
+import { useData } from "vitepress";
+import { watch, nextTick, useTemplateRef, ref, provide } from "vue";
+import { teekDocConfig } from "../config/teekConfig";
+import ConfigSwitch from "./ConfigSwitch.vue";
 
 // import TitleChange from "./TitleChange.vue"; //导入网页标题变化
 // import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
 import ScrollProgressBar from "./ScrollProgressBar.vue"; //导入顶部滚动条组件
 
-const ns = useNamespace("layout-provider");
+const ns = "layout-provider";
+const { frontmatter } = useData();
 
-// 默认文档风
-const current = ref("B");
-
-const teekConfig = ref(current.value === "D" ? teekDocConfig : teekBlogConfig);
+const teekConfig = ref(teekDocConfig);
 provide(teekConfigContext, teekConfig);
 
-const handleSwitch = () => {
-  current.value = current.value === "D" ? "B" : "D";
+const configSwitchRef = useTemplateRef("configSwitchRef");
 
-  if (current.value === "D") teekConfig.value = teekDocConfig;
-  else teekConfig.value = teekBlogConfig;
-};
+watch(
+  () => configSwitchRef.value?.teekConfig,
+  async newVal => {
+    if (newVal) teekConfig.value = newVal;
+  }
+);
+
 </script>
 
 <template>
@@ -37,17 +41,9 @@ const handleSwitch = () => {
     <template #layout-top>
     </template>
     
-    <template #nav-bar-content-after>
-      <div :class="ns.b('appearance')">
-        <TkAvatar
-          :size="24"
-          :class="ns.be('appearance', 'switch')"
-          :bg-color="ns.cssVar('theme-color')"
-          @click="handleSwitch"
-          title="切換文檔風(D)/部落格風(B)"
-        >
-          <span class="name">{{ current }}</span>
-        </TkAvatar>
+    <template #teek-theme-enhance-bottom>
+      <div :class="[ns, 'flx-align-center']">
+        <ConfigSwitch ref="configSwitchRef" />
       </div>
     </template>
 
