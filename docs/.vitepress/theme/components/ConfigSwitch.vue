@@ -39,11 +39,11 @@ const segmentedOptions = [
 ];
 
 const emit = defineEmits<{
-    switch: [config: typeof teekDocConfig, style: string];
+  switch: [config: typeof teekDocConfig, style: string];
 }>();
 
 // 默认文档风格
-const themeStyle = ref("blog-full");
+const themeStyle = defineModel({ default: "blog-full" });
 const teekConfig = ref(teekBlogFullConfig);
 
 const { copy, copied } = useClipboard();
@@ -56,14 +56,16 @@ const update = async (style: string) => {
   if (style === "blog-full") teekConfig.value = teekBlogFullConfig;
   if (style === "blog-body") teekConfig.value = teekBlogBodyConfig;
   if (style === "blog-card") teekConfig.value = teekBlogCardConfig;
-  emit("switch", teekConfig.value, style);
-  await nextTick();
-  if (!isClient) return;
 
+  emit("switch", teekConfig.value, style);
+
+  await nextTick();
+
+  if (!isClient) return;
   const navDom = document.querySelector(".VPNavBar") as HTMLElement;
 
   // 兼容 Teek Banner 样式
-  if (["blog-full", "blog-body"].includes(style)) navDom?.classList.add("full-img-nav-bar");
+  if (["blog-full", "blog-body", "blog-card"].includes(style)) navDom?.classList.add("full-img-nav-bar");
   else navDom?.classList.remove("full-img-nav-bar");
 };
 
@@ -75,8 +77,6 @@ const handleCopy = async () => {
     ? TkMessage.success({ message: "複製成功！", plain: true })
     : TkMessage.error({ message: "複製失敗！", plain: true });
 };
-
-defineExpose({ themeStyle, teekConfig });
 </script>
 
 <template>
@@ -94,7 +94,6 @@ defineExpose({ themeStyle, teekConfig });
         <button @click="handleCopy">Copy</button>
       </div>
     </template>
-
     <TkSegmented v-model="themeStyle" :options="segmentedOptions" />
   </BaseTemplate>
 </template>
@@ -106,7 +105,6 @@ $namespace: config-switch;
   @media (max-width: 768px) {
     margin-top: 10px;
   }
-
   h3 {
     display: inline-block;
     font-size: 12px;
