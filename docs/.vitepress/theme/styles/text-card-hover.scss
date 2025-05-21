@@ -1,10 +1,32 @@
-// 文章列表卡片hover阴影圆角效果
-.tk-post-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; // 过渡属性为transform和box-shadow
+// 定义变量
+$white: #ffffff;
+$circle-height: 465px;
+$icons-margin-top: 10px;
 
-  &:hover {
-    box-shadow: 0 10px 16px -4px var(--vp-c-brand-1); // 首页卡片阴影效果
-    transform: translateY(-3px); // 首页卡片向上移动3px
-    border-radius: 8px; // 首页卡片圆角效果
+// 圆形背景
+.is-circle-bg {
+  height: $circle-height; // 首页卡片栏博主信息高度
+}
+
+.tk-my__icons {
+  margin-top: $icons-margin-top; //首页卡片栏博主信息社交图标位置
+  color: $white; //首页卡片栏作者信息社交图标颜色
+}
+
+// 首页卡片栏博主信息
+.tk-my__blogger {
+  .name,
+  .slogan {
+    color: $white; // 博主名称和标语颜色
+    display: flex; // 水平居中
+    justify-content: center; // 水平居中
   }
 }
+
+.tk-my__avatar {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+// .is-circle-bg {
+//   height: 645px;
+// }

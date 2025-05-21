@@ -9,6 +9,7 @@ import ConfigSwitch from "./ConfigSwitch.vue";
 
 // import TitleChange from "./TitleChange.vue"; //导入网页标题变化
 // import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
+import ContributeChart from "./ContributeChart.vue"; //导入贡献图表 
 import ScrollProgressBar from "./ScrollProgressBar.vue"; //导入顶部滚动条组件
 
 const ns = "layout-provider";
@@ -37,8 +38,14 @@ watch(
 
   <!-- 顶部滚动条组件 -->
   <ScrollProgressBar />
+
   <Teek.Layout :locale="zhTw">
     <template #layout-top>
+    </template>
+
+    <template #teek-archives-top-before>
+      <!-- 贡献图表 -->
+      <ContributeChart />
     </template>
     
     <template #teek-theme-enhance-bottom>
@@ -92,3 +99,12 @@ $namespace: tk-layout-provider;
 }
 </style>
 
+<style lang="scss">
+.tk-my.is-circle-bg {
+    margin-bottom: 20px;
+
+    .tk-my__avatar.circle-rotate {
+        margin-top: 200px;
+    }
+}
+</style>

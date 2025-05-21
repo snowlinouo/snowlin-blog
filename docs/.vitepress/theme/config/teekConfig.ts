@@ -23,10 +23,12 @@ const teekBlogCommonConfig: TeekConfig = {
     shape: "circle",
     name: "雪鈴",
     slogan: "喵喵(?",
+    circleBgMask: false,
+    color: "#fff",
   },
 
   // 文章
-  article: {
+  articleAnalyze: {
     showIcon: true, // 作者、日期、分类、标签、字数、阅读时长、浏览量等文章信息的图标是否显示
     // dateFormat: "yyyy-MM-dd hh:mm:ss", // 文章日期格式，首页和文章页解析日期时使用
     dateFormat: "yyyy-MM-dd", // 文章日期格式，首页和文章页解析日期时使用
@@ -36,20 +38,6 @@ const teekBlogCommonConfig: TeekConfig = {
     showUpdateDate: true, // 是否展示更新日期，是否展示更新时间，仅在文章页显示
     showCategory: true, // 是否展示分类
     showTag: true, // 是否展示标签
-    topTip: frontmatter => {
-      const tip: Record<string, string> = {
-        type: "warning",
-        title: "注意",
-        text: "文章发布较早，内容可能过时，阅读注意甄别。",
-      };
-
-      // frontmatter.long 为 true，则添加提示
-      if (frontmatter.long) return tip;
-
-      // frontmatter.date 大于半年，则添加提示
-      const longTime = 6 * 30 * 24 * 60 * 60 * 1000;
-      if (frontmatter.date && Date.now() - new Date(frontmatter.date).getTime() > longTime) return tip;
-    },
 
     // imageViewer: {
     //   hideOnClickModal: true,

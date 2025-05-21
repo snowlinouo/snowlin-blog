@@ -17,6 +17,45 @@ const description = ["vitepress-theme-teek 使用文档", "vitepress 主题框�
 const teekConfig = defineTeekConfig({
   author: { name: "雪鈴", link: "https://github.com/snowlinouo" },
 
+  // 登录页
+  private: {
+    enabled: true,
+    expire: "1d",
+    session: true,
+    siteLogin: false,
+    site: [
+      { username: "teek-site-1", password: "teek", role: "common", expire: "1d", session: true, strategy: "once" },
+      { username: "teek-site-2", password: "teek", role: "admin", expire: "1d", session: false, strategy: "always" },
+    ],
+    pages: [
+      { username: "teek-pages-1", password: "teek", expire: "1d", session: true, strategy: "once" },
+      { username: "teek-pages-2", password: "teek", expire: "1d", session: false, strategy: "always" },
+    ],
+    realm: {
+      blog: [
+        { username: "teek-blog-1", password: "teek", expire: "1d", session: true, strategy: "once" },
+        { username: "teek-blog-2", password: "teek", expire: "1d", session: false, strategy: "always" },
+      ],
+      comment: [
+        { username: "teek-comment-1", password: "teek", expire: "1d", session: true, strategy: "always" },
+        { username: "teek-comment-2", password: "teek", expire: "1d", session: false, strategy: "always" },
+      ],
+    },
+    // onFocus: (value, formName) => {},
+    // onBlur: (value, formName) => {},
+    // doLogin: (loginInfo, type, nativeExecLogin) => true,
+    // doValidate: (type, frontmatter, nativeExecLogin) => true,
+    // encrypt: (value, frontmatter) => value,
+    // decrypt: (value, frontmatter) => value,
+  },
+
+  // 风险链接提示页
+  riskLink: {
+    enabled: false,
+    whitelist: ["http://vp.teek.top", "https://blog.snowlinlan.com/", "https://github.com/"],
+    // blacklist: [],
+  },
+
   themeEnhance: {
     spotlight: {
       defaultValue: false,
