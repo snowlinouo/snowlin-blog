@@ -8,7 +8,7 @@ import { watch, nextTick, ref, provide } from "vue";
 import { teekBlogFullConfig } from "../config/teekConfig";
 
 import { useRuntime } from "../hooks/useRuntime";
-import { useRibbon } from "../hooks/useRibbon";  //导入彩带背景
+//import { useRibbon } from "../hooks/useRibbon";  //导入彩带背景
 
 import ScrollProgressBar from "./ScrollProgressBar.vue" //导入顶部滚动条组件
 import ContributeChart from "./ContributeChart.vue";  //导入贡献图组件
@@ -21,7 +21,7 @@ const teekConfig = ref(teekBlogFullConfig);  // 博客类风格的配置,默认�
 provide(teekConfigContext, teekConfig);
 
 // 彩带背景
-const { start: startRibbon, stop: stopRibbon } = useRibbon({ immediate: false, clickReRender: true });
+//const { start: startRibbon, stop: stopRibbon } = useRibbon({ immediate: false, clickReRender: true });
 
 // 页脚运行时间
 const { start: startRuntime, stop: stopRuntime } = useRuntime("2025-03-14 00:00:00", {
@@ -39,8 +39,8 @@ const watchRuntimeAndRibbon = async (layout: string, style: string) => {
   else stopRuntime();
 
   // 博客类风格的首页显示彩带 & 设置了 pageStyle 的文章页显示彩带
-  if ((isHome && isBlog && style !== "blog-body") || (isDoc && !!teekConfig.value.pageStyle)) startRibbon();
-  else stopRibbon();
+  //if ((isHome && isBlog && style !== "blog-body") || (isDoc && !!teekConfig.value.pageStyle)) startRibbon();
+  //else stopRibbon();
 };
 
 // 默认文档风
